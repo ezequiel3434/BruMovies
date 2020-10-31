@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37029D43254DD96F0033D073 /* AppDelegate.swift */; };
-		37029D46254DD96F0033D073 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37029D45254DD96F0033D073 /* SceneDelegate.swift */; };
 		37029D48254DD96F0033D073 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37029D47254DD96F0033D073 /* ViewController.swift */; };
 		37029D4B254DD96F0033D073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37029D49254DD96F0033D073 /* Main.storyboard */; };
 		37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37029D4C254DD96F0033D073 /* BruMovies.xcdatamodeld */; };
@@ -22,7 +21,6 @@
 		2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BruMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37029D40254DD96F0033D073 /* BruMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BruMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37029D43254DD96F0033D073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37029D45254DD96F0033D073 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		37029D47254DD96F0033D073 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		37029D4A254DD96F0033D073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		37029D4D254DD96F0033D073 /* BruMovies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BruMovies.xcdatamodel; sourceTree = "<group>"; };
@@ -65,16 +63,63 @@
 		37029D42254DD96F0033D073 /* BruMovies */ = {
 			isa = PBXGroup;
 			children = (
-				37029D43254DD96F0033D073 /* AppDelegate.swift */,
-				37029D45254DD96F0033D073 /* SceneDelegate.swift */,
+				37029D5D254DF2AE0033D073 /* Modules */,
+				37029D5A254DDF400033D073 /* Code */,
+				37029D5C254DDF7C0033D073 /* Extensions */,
+				37029D5F254DF2E80033D073 /* SupportingFiles */,
+				37029D5B254DDF4A0033D073 /* Resources */,
+			);
+			path = BruMovies;
+			sourceTree = "<group>";
+		};
+		37029D5A254DDF400033D073 /* Code */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Code;
+			sourceTree = "<group>";
+		};
+		37029D5B254DDF4A0033D073 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				37029D51254DD9710033D073 /* LaunchScreen.storyboard */,
+				37029D4F254DD9710033D073 /* Assets.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		37029D5C254DDF7C0033D073 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		37029D5D254DF2AE0033D073 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				37029D5E254DF2B60033D073 /* Home */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		37029D5E254DF2B60033D073 /* Home */ = {
+			isa = PBXGroup;
+			children = (
 				37029D47254DD96F0033D073 /* ViewController.swift */,
 				37029D49254DD96F0033D073 /* Main.storyboard */,
-				37029D4F254DD9710033D073 /* Assets.xcassets */,
-				37029D51254DD9710033D073 /* LaunchScreen.storyboard */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		37029D5F254DF2E80033D073 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				37029D43254DD96F0033D073 /* AppDelegate.swift */,
 				37029D54254DD9710033D073 /* Info.plist */,
 				37029D4C254DD96F0033D073 /* BruMovies.xcdatamodeld */,
 			);
-			path = BruMovies;
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -83,7 +128,6 @@
 				237483D16AC215118D11D2BE /* Pods-BruMovies.debug.xcconfig */,
 				661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -195,7 +239,6 @@
 				37029D48254DD96F0033D073 /* ViewController.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
-				37029D46254DD96F0033D073 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -342,7 +385,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PF4PD98CF;
-				INFOPLIST_FILE = BruMovies/Info.plist;
+				INFOPLIST_FILE = BruMovies/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -361,7 +404,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 8PF4PD98CF;
-				INFOPLIST_FILE = BruMovies/Info.plist;
+				INFOPLIST_FILE = BruMovies/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
