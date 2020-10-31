@@ -1,0 +1,6 @@
+framework module Pods_BruMovies {
+  umbrella header "Pods-BruMovies-umbrella.h"
+
+  export *
+  module * { export * }
+}
