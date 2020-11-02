@@ -8,7 +8,17 @@
 
 import Foundation
 
+//MARK: - Movie Response
+
+struct MoviewResponse: Decodable {
+    let results: [Movie]
+}
+
+//MARK: - Moview
 struct Movie: Decodable {
+    
+    //MARK: - Model Attributes
+    
     let id: Int
     let title: String
     let backdropPath: String?
@@ -17,7 +27,7 @@ struct Movie: Decodable {
     let voteAvarege: Double
     let voteCount: Int
     let runtime: Int?
-    let releaseDate: String
+    let releaseDate: String?
     
     let genres: [MovieGenre]?
     let credits: MovieCredit?
@@ -34,6 +44,8 @@ struct Movie: Decodable {
         formatter.allowedUnits = [.hour, .minute]
         return formatter
     }()
+    
+    //MARK: - Getters
     
     var backdropURL: URL {
         return URL(string: "https://image.tmdb.org/t/p/w500\(backdropPath ?? "")")!
@@ -63,8 +75,37 @@ struct Movie: Decodable {
     }
     
     var yearText: String {
-        guard let releaseDate = self.releaseDate else { return <#return value#> }
+        guard let releaseDate = self.releaseDate, let date = Utils.dateFormatter.date(from: releaseDate) else { return "n/a" }
+        return Movie.yearFormatter.string(from: date)
     }
+    
+    var durationText: String {
+        guard let runtime = self.runtime, runtime > 0 else {
+            return "n/a"
+        }
+        return Movie.durationFormatter.string(from: TimeInterval(runtime) * 60) ?? "n/a"
+    }
+    
+    var cast: [MoviewCast]? {
+        credits?.cast
+    }
+    var crew: [MoviewCrew]? {
+        credits?.crew
+    }
+    
+    var directors: [MoviewCrew]? {
+        crew?.filter{ $0.job.lowercased() == "director" }
+    }
+    
+    var producers: [MoviewCrew]? {
+        crew?.filter{ $0.job.lowercased() == "producer" }
+    }
+    
+    var screenWriters: [MoviewCrew]? {
+        crew?.filter{ $0.job.lowercased() == "story" }
+    }
+    
+    
     
     
 }
