@@ -16,23 +16,36 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         movieService = NetworkManager.shared
-        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
-                   
-                   
-                   switch result {
-                   case .success(let response ):
-                    let mov = response.results
-                    print(mov.map { String(describing: $0.id)  })
-                       
-                   case .failure(let error):
-                       print(error)
-                   }
-               }
+//        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
+//
+//
+//                   switch result {
+//                   case .success(let response ):
+//                    let mov = response.results
+//                    print(mov.map { String(describing: $0.id)  })
+//
+//                   case .failure(let error):
+//                       print(error)
+//                   }
+//               }
         
-        self.movieService?.downloadMovieImage(urlString: "https://image.tmdb.org/t/p/w500/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg", id: "724989", completion: { res, error in
-        if (error == .none) {
-            print(self.fileHandler.getPathForImage(id: self.id).path)
-        }
+//        self.movieService?.downloadMovieImage(urlString: "https://image.tmdb.org/t/p/w500/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg", id: "724989", completion: { res, error in
+//        if (error == .none) {
+//            print(self.fileHandler.getPathForImage(id: self.id).path)
+//        }
+//        })
+        
+        
+        self.movieService?.searchMovie(query: "batman", completion: { (result) in
+            switch result {
+            case .success(let response ):
+             let mov = response.results
+             print(mov)
+             print(mov.map { String(describing: $0.id)  })
+             
+            case .failure(let error):
+                print(error)
+            }
         })
     }
 

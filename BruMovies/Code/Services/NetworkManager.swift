@@ -66,14 +66,30 @@ class NetworkManager: MovieService {
         }.resume()
     }
     
-    
-    func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
-        
-    }
-    
     func searchMovie(query: String, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
-        
+        guard let url = URL(string: "\(baseAPIURL)/search/movie") else {
+            completion(.failure(.invalidEndpoint))
+            return
+        }
+        self.loadURLAndDecode(url: url, params: [
+            "language": "es-ES",
+            "include_adult": "false",
+            "region": "AR",
+            "query": query
+        ], completion: completion)
     }
+    
+   func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
+        guard let url = URL(string: "\(baseAPIURL)/movie/\(id)") else {
+            completion(.failure(.invalidEndpoint))
+            return
+        }
+        self.loadURLAndDecode(url: url, params: [
+            "append_to_response": "credits"
+        ], completion: completion)
+    }
+    
+    
     
     
     
