@@ -8,5 +8,24 @@
 
 import Foundation
 
-
+class NetworkManager: MovieService {
+    
+    
+    
+    
+    
+    func fetchMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
+        <#code#>
+    }
+    
+    func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
+        <#code#>
+    }
+    
+    func searchMovie(query: String, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
+        <#code#>
+    }
+    
+    
+}
 

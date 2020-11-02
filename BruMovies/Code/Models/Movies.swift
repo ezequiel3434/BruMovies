@@ -10,7 +10,7 @@ import Foundation
 
 //MARK: - Movie Response
 
-struct MoviewResponse: Decodable {
+struct MovieResponse: Decodable {
     let results: [Movie]
 }
 
@@ -86,22 +86,22 @@ struct Movie: Decodable {
         return Movie.durationFormatter.string(from: TimeInterval(runtime) * 60) ?? "n/a"
     }
     
-    var cast: [MoviewCast]? {
+    var cast: [MovieCast]? {
         credits?.cast
     }
-    var crew: [MoviewCrew]? {
+    var crew: [MovieCrew]? {
         credits?.crew
     }
     
-    var directors: [MoviewCrew]? {
+    var directors: [MovieCrew]? {
         crew?.filter{ $0.job.lowercased() == "director" }
     }
     
-    var producers: [MoviewCrew]? {
+    var producers: [MovieCrew]? {
         crew?.filter{ $0.job.lowercased() == "producer" }
     }
     
-    var screenWriters: [MoviewCrew]? {
+    var screenWriters: [MovieCrew]? {
         crew?.filter{ $0.job.lowercased() == "story" }
     }
     
@@ -115,17 +115,17 @@ struct MovieGenre: Decodable {
 }
 
 struct MovieCredit: Decodable {
-    let cast: [MoviewCast]
-    let crew: [MoviewCrew]
+    let cast: [MovieCast]
+    let crew: [MovieCrew]
 }
 
-struct MoviewCast: Decodable {
+struct MovieCast: Decodable {
     let id: Int
     let character: String
     let name: String
 }
 
-struct MoviewCrew: Decodable, Identifiable {
+struct MovieCrew: Decodable, Identifiable {
     let id: Int
     let job: String
     let name: String
