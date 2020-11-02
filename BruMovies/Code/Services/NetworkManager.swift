@@ -21,7 +21,7 @@ class NetworkManager: MovieService {
     private let fileHandler = FileHandler()
     private let imageCompressionScale: CGFloat = 0.25
    
-    
+    //MARK: - Functions to call the API
     
     func fetchMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
         guard let url = URL(string: "\(baseAPIURL)/movie/\(endpoint.rawValue)") else {
@@ -34,6 +34,38 @@ class NetworkManager: MovieService {
         loadURLAndDecode(url: url, completion: completion)
         
     }
+    
+    func downloadMovieImage(urlString: String, id: String, completion: @escaping(URL?, MovieError?) -> ()) {
+        
+        guard let url = URL(string: urlString) else {
+            
+            completion(nil,.invalidEndpoint)
+            return
+            
+        }
+        urlSession.dataTask(with: url) { [weak self] (data, response, error) in
+            guard let self = self else { return }
+            
+            guard let imageData = data else {
+                print("no data")
+                return
+            }
+            
+            
+                guard let image = UIImage(data: imageData), let compressedData = image.jpegData(compressionQuality: self.imageCompressionScale) else { return }
+                do {
+                    try compressedData.write(to: self.fileHandler.getPathForImage(id: id))
+                    
+                    
+                    completion(self.fileHandler.getPathForImage(id: id), nil )
+
+      
+            } catch {
+               print( "serialization error")
+            }
+        }.resume()
+    }
+    
     
     func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
         
@@ -68,7 +100,7 @@ class NetworkManager: MovieService {
         
         urlSession.dataTask(with: finalURL) { [weak self] (data, response, error) in
             guard let self = self else { return }
-            print(finalURL)
+            
             if error != nil {
                 self.executeCompletionHandlerInMainThread(with: .failure(.apiError), completion: completion)
                 return

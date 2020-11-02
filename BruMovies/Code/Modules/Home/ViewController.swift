@@ -9,23 +9,31 @@
 import UIKit
 
 class ViewController: UIViewController {
-
+    let fileHandler = FileHandler()
     let networkManager = NetworkManager.shared
     var movieService: NetworkManager?
+    let id = "724989"
     override func viewDidLoad() {
         super.viewDidLoad()
         movieService = NetworkManager.shared
-        self.movieService!.fetchMovies(from: .topRated  ) { [weak self] (result) in
-                   guard let self = self else { return }
+        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
+                   
                    
                    switch result {
-                   case .success(let response):
-                       print(response.results)
+                   case .success(let response ):
+                    let mov = response.results
+                    print(mov.map { String(describing: $0.id)  })
                        
                    case .failure(let error):
                        print(error)
                    }
                }
+        
+        self.movieService?.downloadMovieImage(urlString: "https://image.tmdb.org/t/p/w500/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg", id: "724989", completion: { res, error in
+        if (error == .none) {
+            print(self.fileHandler.getPathForImage(id: self.id).path)
+        }
+        })
     }
 
 
