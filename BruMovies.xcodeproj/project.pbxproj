@@ -18,7 +18,7 @@
 		37750335254F7A2100988B29 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750334254F7A2100988B29 /* NetworkManager.swift */; };
 		37750337254F84BC00988B29 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750336254F84BC00988B29 /* MovieService.swift */; };
 		377503392550513700988B29 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377503382550513700988B29 /* UserDefaultsManager.swift */; };
-		3775033B25505F3C00988B29 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775033A25505F3C00988B29 /* FileManager.swift */; };
+		3775033B25505F3C00988B29 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775033A25505F3C00988B29 /* FileHandler.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -38,7 +38,7 @@
 		37750334254F7A2100988B29 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		37750336254F84BC00988B29 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		377503382550513700988B29 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
-		3775033A25505F3C00988B29 /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		3775033A25505F3C00988B29 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -151,7 +151,7 @@
 				37750334254F7A2100988B29 /* NetworkManager.swift */,
 				37750336254F84BC00988B29 /* MovieService.swift */,
 				377503382550513700988B29 /* UserDefaultsManager.swift */,
-				3775033A25505F3C00988B29 /* FileManager.swift */,
+				3775033A25505F3C00988B29 /* FileHandler.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -276,7 +276,7 @@
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
-				3775033B25505F3C00988B29 /* FileManager.swift in Sources */,
+				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
 			);

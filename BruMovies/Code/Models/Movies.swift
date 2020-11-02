@@ -8,6 +8,7 @@
 
 import Foundation
 
+
 //MARK: - Movie Response
 
 struct MovieResponse: Decodable {
@@ -15,8 +16,15 @@ struct MovieResponse: Decodable {
 }
 
 //MARK: - Moview
-struct Movie: Decodable {
-    
+struct Movie: Decodable, Identifiable {
+//    static func == (lhs: Movie, rhs: Movie) -> Bool {
+//        lhs.id == rhs.id
+//    }
+//    
+//    func hash(into hasher: inout Hasher) {
+//        hasher.combine(id)
+//    }
+//    
     //MARK: - Model Attributes
     
     let id: Int
@@ -24,7 +32,7 @@ struct Movie: Decodable {
     let backdropPath: String?
     let posterPath: String?
     let overview: String
-    let voteAvarege: Double
+    let voteAverage: Double
     let voteCount: Int
     let runtime: Int?
     let releaseDate: String?
@@ -60,7 +68,7 @@ struct Movie: Decodable {
     }
     
     var ratingText: String {
-        let rating = Int(voteAvarege)
+        let rating = Int(voteAverage)
         let ratingText = (0..<rating).reduce("") { (acc, _) -> String in
             return acc + "★"
         }
@@ -105,7 +113,7 @@ struct Movie: Decodable {
         crew?.filter{ $0.job.lowercased() == "story" }
     }
     
-    
+
     
     
 }
@@ -130,3 +138,4 @@ struct MovieCrew: Decodable, Identifiable {
     let job: String
     let name: String
 }
+

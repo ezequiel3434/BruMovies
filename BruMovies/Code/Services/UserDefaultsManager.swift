@@ -52,6 +52,7 @@ class UserDefaultsManager {
             return false
         } else {
             self.addToSubcriptions(id: id, subcriptions: subcriptions)
+            return true
         }
     }
     

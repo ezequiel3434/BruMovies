@@ -14,4 +14,12 @@ class Utils {
         dateformatter.dateFormat = "yyyy-mm-dd"
         return dateformatter
     }()
+    
+    static let jsonDecoder: JSONDecoder = {
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.keyDecodingStrategy = .convertFromSnakeCase
+        jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
+        return jsonDecoder
+    }()
+    
 }
