@@ -10,18 +10,30 @@ import UIKit
 
 class HomeViewController: UIViewController {
     
+    //MARK: - Outlets
+    @IBOutlet weak var nowPlayingCollectionView: UICollectionView!
+    @IBOutlet weak var topRatedCollectionView: UICollectionView!
+    @IBOutlet weak var subscriptionsCollectionView: UICollectionView!
+    @IBOutlet weak var subscriptionsStackView: UIStackView!
+    
+    
     //MARK: - Variables
     override class func description() -> String {
         "HomeViewController"
     }
     
-    let fileHandler = FileHandler()
-    let networkManager = NetworkManager.shared
-    var movieService: NetworkManager?
-    let id = "724989"
+    
+    
+    
+    
+    
+//    let fileHandler = FileHandler()
+//    let networkManager = NetworkManager.shared
+//    var movieService: NetworkManager?
+//    let id = "724989"
     override func viewDidLoad() {
         super.viewDidLoad()
-        movieService = NetworkManager.shared
+        //movieService = NetworkManager.shared
 //        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
 //
 //
@@ -42,17 +54,17 @@ class HomeViewController: UIViewController {
 //        })
         
         
-        self.movieService?.searchMovie(query: "batman", completion: { (result) in
-            switch result {
-            case .success(let response ):
-             let mov = response.results
-             print(mov)
-             print(mov.map { String(describing: $0.id)  })
-             
-            case .failure(let error):
-                print(error)
-            }
-        })
+//        self.movieService?.searchMovie(query: "batman", completion: { (result) in
+//            switch result {
+//            case .success(let response ):
+//             let mov = response.results
+//             print(mov)
+//             print(mov.map { String(describing: $0.id)  })
+//
+//            case .failure(let error):
+//                print(error)
+//            }
+//        })
     }
 
 
