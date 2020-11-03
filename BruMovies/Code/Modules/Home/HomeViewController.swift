@@ -65,8 +65,37 @@ class HomeViewController: UIViewController {
 //                print(error)
 //            }
 //        })
+        
+//        let response: genresID?  = try? Bundle.main.loadAndDecodeJSON(filename: "GenresId")
+        
+        let response: genresID? = try? Bundle.main.loadAndDecodeJSON(filename: "genres")
+       print(response!.genres)
+       
     }
+    
+//    func loadLocalJSON() {
+//        let url = Bundle.main.url(forResource: "genres_id", withExtension: "json")!
+//        let data  = try! Data(contentsOf: url)
+//        let colors = try! JSONDecoder().decode(genresID.self, from: data)
+//        print(colors)
+//    }
+    
+    
 
 
 }
 
+extension Bundle {
+
+    func loadAndDecodeJSON<D: Decodable>(filename: String) throws -> D? {
+        guard let url = self.url(forResource: filename, withExtension: "json") else {
+            print("hola")
+            return nil
+        }
+        let data = try Data(contentsOf: url)
+        let jsonDecoder = Utils.jsonDecoder
+        let decodedModel = try jsonDecoder.decode(D.self, from: data)
+        //print(decodedModel)
+        return decodedModel
+    }
+}

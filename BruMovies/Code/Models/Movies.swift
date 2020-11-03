@@ -15,6 +15,15 @@ struct MovieResponse: Decodable {
     let results: [Movie]
 }
 
+struct genresID: Decodable {
+    let genres: [genre]
+}
+
+struct genre: Decodable {
+    let id: Int
+    let name: String
+}
+
 //MARK: - Moview
 struct Movie: Decodable, Identifiable {
 //    static func == (lhs: Movie, rhs: Movie) -> Bool {

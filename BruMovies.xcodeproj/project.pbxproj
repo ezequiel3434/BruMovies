@@ -24,6 +24,9 @@
 		37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AAE07A2550D4630009B6D5 /* Search.storyboard */; };
 		37D1F38725514EC70071C461 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F38625514EC70071C461 /* MovieListViewModel.swift */; };
 		37D1F389255151B00071C461 /* BoxBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F388255151B00071C461 /* BoxBind.swift */; };
+		37D1F38B255154E60071C461 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F38A255154E60071C461 /* MovieViewModel.swift */; };
+		37D1F38F25516AEC0071C461 /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F38E25516AEC0071C461 /* genres.json */; };
+		37D1F39225516BD90071C461 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39125516BD90071C461 /* LineView.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +52,9 @@
 		37AAE07A2550D4630009B6D5 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		37D1F38625514EC70071C461 /* MovieListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListViewModel.swift; sourceTree = "<group>"; };
 		37D1F388255151B00071C461 /* BoxBind.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BoxBind.swift; sourceTree = "<group>"; };
+		37D1F38A255154E60071C461 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
+		37D1F38E25516AEC0071C461 /* genres.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
+		37D1F39125516BD90071C461 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -96,6 +102,7 @@
 		37029D5A254DDF400033D073 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F39025516BC40071C461 /* Views */,
 				3775032E254F521E00988B29 /* Models */,
 				37D1F38525514E960071C461 /* ViewModels */,
 				37029D5D254DF2AE0033D073 /* Modules */,
@@ -110,6 +117,7 @@
 			children = (
 				37029D51254DD9710033D073 /* LaunchScreen.storyboard */,
 				37029D4F254DD9710033D073 /* Assets.xcassets */,
+				37D1F38E25516AEC0071C461 /* genres.json */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -182,9 +190,18 @@
 		37D1F38525514E960071C461 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F38A255154E60071C461 /* MovieViewModel.swift */,
 				37D1F38625514EC70071C461 /* MovieListViewModel.swift */,
 			);
 			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		37D1F39025516BC40071C461 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F39125516BD90071C461 /* LineView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -265,6 +282,7 @@
 			files = (
 				37029D53254DD9710033D073 /* LaunchScreen.storyboard in Resources */,
 				37029D50254DD9710033D073 /* Assets.xcassets in Resources */,
+				37D1F38F25516AEC0071C461 /* genres.json in Resources */,
 				37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */,
 				37029D4B254DD96F0033D073 /* Home.storyboard in Resources */,
 			);
@@ -307,8 +325,10 @@
 				37750332254F606B00988B29 /* Utils.swift in Sources */,
 				37AAE0792550D2250009B6D5 /* MovieSearchViewController.swift in Sources */,
 				37D1F389255151B00071C461 /* BoxBind.swift in Sources */,
+				37D1F38B255154E60071C461 /* MovieViewModel.swift in Sources */,
 				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
+				37D1F39225516BD90071C461 /* LineView.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
 				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
