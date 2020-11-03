@@ -27,6 +27,7 @@
 		37D1F38B255154E60071C461 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F38A255154E60071C461 /* MovieViewModel.swift */; };
 		37D1F38F25516AEC0071C461 /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F38E25516AEC0071C461 /* genres.json */; };
 		37D1F39225516BD90071C461 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39125516BD90071C461 /* LineView.swift */; };
+		37D1F3942551CCF90071C461 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3932551CCF90071C461 /* BundleExtensions.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,7 @@
 		37D1F38A255154E60071C461 /* MovieViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieViewModel.swift; sourceTree = "<group>"; };
 		37D1F38E25516AEC0071C461 /* genres.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
 		37D1F39125516BD90071C461 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
+		37D1F3932551CCF90071C461 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -125,6 +127,7 @@
 		37029D5C254DDF7C0033D073 /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F3932551CCF90071C461 /* BundleExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -331,6 +334,7 @@
 				37D1F39225516BD90071C461 /* LineView.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
+				37D1F3942551CCF90071C461 /* BundleExtensions.swift in Sources */,
 				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
