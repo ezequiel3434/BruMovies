@@ -11,13 +11,13 @@ import Foundation
 struct FileHandler {
     let documentsDirectory = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask)[0]
     
-    func getPathForImage(id: String) -> URL {
-        let pathComponent = "\(id).jpg"
+    func getPathForImage(id: Int, imageType: MovieListImage) -> URL {
+        let pathComponent = "\(id)_\(imageType.rawValue).jpg"
         return documentsDirectory.appendingPathComponent(pathComponent)
     }
     
-    func checkIfFileExists(id: String) -> Bool {
-        let pathComponent = "\(id).jpg"
+    func checkIfFileExists(id: Int, imageType: MovieListImage) -> Bool {
+        let pathComponent = "\(id)_\(imageType.rawValue).jpg"
         return FileManager.default.fileExists(atPath: documentsDirectory.appendingPathComponent(pathComponent).path)
     }
     

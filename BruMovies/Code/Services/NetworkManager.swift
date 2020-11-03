@@ -26,7 +26,7 @@ class NetworkManager: MovieService {
     
     
     func getGenresBy(id: Int) -> String? {
-        print("hola")
+        
         let response: genresID? = try? Bundle.main.loadAndDecodeJSON(filename: "genres")
         let genresArray = response!.genres
         return genresArray.filter { (genre) -> Bool in
@@ -50,9 +50,9 @@ class NetworkManager: MovieService {
         
     }
     
-    func downloadMovieImage(urlString: String, id: String, completion: @escaping(URL?, MovieError?) -> ()) {
+    func downloadMovieImage(url: URL?,imageType: MovieListImage ,id: Int, completion: @escaping(URL?, MovieError?) -> ()) {
         
-        guard let url = URL(string: urlString) else {
+        guard let url = url else {
             
             completion(nil,.invalidEndpoint)
             return
@@ -69,10 +69,10 @@ class NetworkManager: MovieService {
             
             guard let image = UIImage(data: imageData), let compressedData = image.jpegData(compressionQuality: self.imageCompressionScale) else { return }
             do {
-                try compressedData.write(to: self.fileHandler.getPathForImage(id: id))
+                try compressedData.write(to: self.fileHandler.getPathForImage(id: id, imageType: imageType ))
                 
                 
-                completion(self.fileHandler.getPathForImage(id: id), nil )
+                completion(self.fileHandler.getPathForImage(id: id, imageType: imageType), nil )
                 
                 
             } catch {

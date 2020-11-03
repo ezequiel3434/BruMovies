@@ -30,6 +30,20 @@ enum MovieListEndpoint: String, CaseIterable, Identifiable {
     }
 }
 
+enum MovieListImage: String, CaseIterable, Identifiable {
+    var id: String { rawValue }
+    case poster = "poster"
+    case backdrop = "backdrop"
+    
+//    var description: String {
+//        switch self {
+//
+//        case .poster: return "Now Playing"
+//        case .backdrop: return "Top Rated"
+//        }
+//    }
+}
+
 
 enum MovieError: Error, CustomNSError {
     case apiError
