@@ -8,7 +8,13 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class HomeViewController: UIViewController {
+    
+    //MARK: - Variables
+    override class func description() -> String {
+        "HomeViewController"
+    }
+    
     let fileHandler = FileHandler()
     let networkManager = NetworkManager.shared
     var movieService: NetworkManager?

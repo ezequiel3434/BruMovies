@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37029D43254DD96F0033D073 /* AppDelegate.swift */; };
-		37029D48254DD96F0033D073 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37029D47254DD96F0033D073 /* ViewController.swift */; };
-		37029D4B254DD96F0033D073 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37029D49254DD96F0033D073 /* Main.storyboard */; };
+		37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37029D47254DD96F0033D073 /* HomeViewController.swift */; };
+		37029D4B254DD96F0033D073 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37029D49254DD96F0033D073 /* Home.storyboard */; };
 		37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37029D4C254DD96F0033D073 /* BruMovies.xcdatamodeld */; };
 		37029D50254DD9710033D073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37029D4F254DD9710033D073 /* Assets.xcassets */; };
 		37029D53254DD9710033D073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37029D51254DD9710033D073 /* LaunchScreen.storyboard */; };
@@ -19,6 +19,9 @@
 		37750337254F84BC00988B29 /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750336254F84BC00988B29 /* MovieService.swift */; };
 		377503392550513700988B29 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377503382550513700988B29 /* UserDefaultsManager.swift */; };
 		3775033B25505F3C00988B29 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775033A25505F3C00988B29 /* FileHandler.swift */; };
+		37AAE0762550C82E0009B6D5 /* RootTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AAE0752550C82E0009B6D5 /* RootTabViewController.swift */; };
+		37AAE0792550D2250009B6D5 /* MovieSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37AAE0782550D2250009B6D5 /* MovieSearchViewController.swift */; };
+		37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37AAE07A2550D4630009B6D5 /* Search.storyboard */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,8 +30,8 @@
 		2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_BruMovies.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		37029D40254DD96F0033D073 /* BruMovies.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BruMovies.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37029D43254DD96F0033D073 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		37029D47254DD96F0033D073 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		37029D4A254DD96F0033D073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37029D47254DD96F0033D073 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		37029D4A254DD96F0033D073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		37029D4D254DD96F0033D073 /* BruMovies.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = BruMovies.xcdatamodel; sourceTree = "<group>"; };
 		37029D4F254DD9710033D073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37029D52254DD9710033D073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -39,6 +42,9 @@
 		37750336254F84BC00988B29 /* MovieService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieService.swift; sourceTree = "<group>"; };
 		377503382550513700988B29 /* UserDefaultsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaultsManager.swift; sourceTree = "<group>"; };
 		3775033A25505F3C00988B29 /* FileHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileHandler.swift; sourceTree = "<group>"; };
+		37AAE0752550C82E0009B6D5 /* RootTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootTabViewController.swift; sourceTree = "<group>"; };
+		37AAE0782550D2250009B6D5 /* MovieSearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewController.swift; sourceTree = "<group>"; };
+		37AAE07A2550D4630009B6D5 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +119,7 @@
 			isa = PBXGroup;
 			children = (
 				37029D5E254DF2B60033D073 /* Home */,
+				37AAE0772550D0B00009B6D5 /* Search */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -120,8 +127,9 @@
 		37029D5E254DF2B60033D073 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				37029D47254DD96F0033D073 /* ViewController.swift */,
-				37029D49254DD96F0033D073 /* Main.storyboard */,
+				37029D47254DD96F0033D073 /* HomeViewController.swift */,
+				37029D49254DD96F0033D073 /* Home.storyboard */,
+				37AAE0752550C82E0009B6D5 /* RootTabViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -154,6 +162,15 @@
 				3775033A25505F3C00988B29 /* FileHandler.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		37AAE0772550D0B00009B6D5 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				37AAE0782550D2250009B6D5 /* MovieSearchViewController.swift */,
+				37AAE07A2550D4630009B6D5 /* Search.storyboard */,
+			);
+			path = Search;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -234,7 +251,8 @@
 			files = (
 				37029D53254DD9710033D073 /* LaunchScreen.storyboard in Resources */,
 				37029D50254DD9710033D073 /* Assets.xcassets in Resources */,
-				37029D4B254DD96F0033D073 /* Main.storyboard in Resources */,
+				37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */,
+				37029D4B254DD96F0033D073 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -271,8 +289,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37750335254F7A2100988B29 /* NetworkManager.swift in Sources */,
+				37AAE0762550C82E0009B6D5 /* RootTabViewController.swift in Sources */,
 				37750332254F606B00988B29 /* Utils.swift in Sources */,
-				37029D48254DD96F0033D073 /* ViewController.swift in Sources */,
+				37AAE0792550D2250009B6D5 /* MovieSearchViewController.swift in Sources */,
+				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
@@ -285,12 +305,12 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		37029D49254DD96F0033D073 /* Main.storyboard */ = {
+		37029D49254DD96F0033D073 /* Home.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
 				37029D4A254DD96F0033D073 /* Base */,
 			);
-			name = Main.storyboard;
+			name = Home.storyboard;
 			sourceTree = "<group>";
 		};
 		37029D51254DD9710033D073 /* LaunchScreen.storyboard */ = {
