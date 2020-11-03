@@ -10,7 +10,7 @@
         <!--Home View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="HomeViewController" customModule="BruMovies" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="BYZ-38-t0r" customClass="HomeViewController" customModule="BruMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -21,7 +21,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1952.1739130434785" y="93.75"/>
+            <point key="canvasLocation" x="1439" y="110"/>
         </scene>
         <!--Item-->
         <scene sceneID="xTd-cu-y6q">
@@ -36,17 +36,17 @@
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="GTo-CT-qAB" kind="relationship" relationship="rootViewController" id="eMn-RV-d2d"/>
+                        <segue destination="GTo-CT-qAB" kind="relationship" relationship="rootViewController" id="pL9-d7-AaP"/>
                     </connections>
                 </navigationController>
             </objects>
             <point key="canvasLocation" x="-406" y="110"/>
         </scene>
-        <!--Tab Bar Controller-->
+        <!--Root Tab View Controller-->
         <scene sceneID="uIM-EZ-vB9">
             <objects>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nR0-f0-a4v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GTo-CT-qAB" sceneMemberID="viewController">
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="GTo-CT-qAB" customClass="RootTabViewController" customModule="BruMovies" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationItem key="navigationItem" id="BzY-Be-4AR"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="bmE-xM-KDW">

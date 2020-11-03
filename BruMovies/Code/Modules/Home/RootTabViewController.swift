@@ -32,7 +32,8 @@ class RootTabViewController: UITabBarController {
         self.tabBar.barStyle = .default
         
         guard let homeViewController = storyboard?.instantiateViewController(identifier: HomeViewController.description()) else { return }
-        let searchViewController = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(identifier: MovieSearchViewController.description())
+        let searchViewController = UIStoryboard(name: "Search", bundle: nil).instantiateViewController(withIdentifier: MovieSearchViewController.description())
+               
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house")?.withRenderingMode(.automatic), selectedImage: UIImage(systemName: "house.fill")?.withRenderingMode(.automatic))
         homeViewController.tabBarItem.imageInsets = UIEdgeInsets(top: 2, left: 0, bottom: 0, right: 0)
         homeViewController.tabBarItem.titlePositionAdjustment = .init(horizontal: 0, vertical: 2.0)
