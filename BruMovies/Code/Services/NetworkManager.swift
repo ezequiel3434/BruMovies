@@ -20,7 +20,22 @@ class NetworkManager: MovieService {
     private let jsonDecoder = Utils.jsonDecoder
     private let fileHandler = FileHandler()
     private let imageCompressionScale: CGFloat = 0.25
-   
+    
+    //MARK: - Genres Array
+    
+    
+    
+    func getGenresBy(id: Int) -> String? {
+        print("hola")
+        let response: genresID? = try? Bundle.main.loadAndDecodeJSON(filename: "genres")
+        let genresArray = response!.genres
+        return genresArray.filter { (genre) -> Bool in
+            genre.id == id
+            }[0].name
+        
+        
+    }
+    
     //MARK: - Functions to call the API
     
     func fetchMovies(from endpoint: MovieListEndpoint, completion: @escaping (Result<MovieResponse, MovieError>) -> ()) {
@@ -52,16 +67,16 @@ class NetworkManager: MovieService {
             }
             
             
-                guard let image = UIImage(data: imageData), let compressedData = image.jpegData(compressionQuality: self.imageCompressionScale) else { return }
-                do {
-                    try compressedData.write(to: self.fileHandler.getPathForImage(id: id))
-                    
-                    
-                    completion(self.fileHandler.getPathForImage(id: id), nil )
-
-      
+            guard let image = UIImage(data: imageData), let compressedData = image.jpegData(compressionQuality: self.imageCompressionScale) else { return }
+            do {
+                try compressedData.write(to: self.fileHandler.getPathForImage(id: id))
+                
+                
+                completion(self.fileHandler.getPathForImage(id: id), nil )
+                
+                
             } catch {
-               print( "serialization error")
+                print( "serialization error")
             }
         }.resume()
     }
@@ -79,7 +94,7 @@ class NetworkManager: MovieService {
         ], completion: completion)
     }
     
-   func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
+    func fetchMovie(id: Int, completion: @escaping (Result<Movie, MovieError>) -> ()) {
         guard let url = URL(string: "\(baseAPIURL)/movie/\(id)") else {
             completion(.failure(.invalidEndpoint))
             return

@@ -21,6 +21,7 @@ struct MovieViewModel {
     let posterPath: String?
     let voteAverage: Double
     let releaseDate: String?
+    let genres: [Int]?
     
     static private let yearFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -43,9 +44,10 @@ struct MovieViewModel {
             return URL(string: "https://image.tmdb.org/t/p/w500\(posterPath ?? "")")!
         }
         
-    //    var genreText: String {
-    //        genres?.first?.name ?? "n/a"
-    //    }
+        var genreText: String {
+            return ""
+//            genres?.first?.name ?? "n/a"
+        }
         
         var ratingText: String {
             let rating = Int(voteAverage)

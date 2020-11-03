@@ -70,7 +70,7 @@ class HomeViewController: UIViewController {
         
 //        let response: genresID? = try? Bundle.main.loadAndDecodeJSON(filename: "genres")
 //       //print(response!.genres)
-       
+        print(NetworkManager.shared.getGenresBy(id: 16)!)
     }
     
 

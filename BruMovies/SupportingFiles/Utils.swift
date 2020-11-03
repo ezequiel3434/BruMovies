@@ -9,6 +9,9 @@
 import Foundation
 
 class Utils {
+    
+    
+    
     static let dateFormatter: DateFormatter = {
         let dateformatter = DateFormatter()
         dateformatter.dateFormat = "yyyy-mm-dd"
@@ -21,5 +24,7 @@ class Utils {
         jsonDecoder.dateDecodingStrategy = .formatted(dateFormatter)
         return jsonDecoder
     }()
+    
+    
     
 }
