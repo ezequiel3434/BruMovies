@@ -36,7 +36,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFb-dT-K0m" customClass="LineView" customModule="Movieflex" customModuleProvider="target">
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="LFb-dT-K0m" customClass="LineView" customModule="BruMovies" customModuleProvider="target">
                                                 <rect key="frame" x="143" y="139.5" width="72" height="5"/>
                                                 <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -64,7 +64,7 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Psv-tt-I1W" customClass="LineView" customModule="Movieflex" customModuleProvider="target">
+                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Psv-tt-I1W" customClass="LineView" customModule="BruMovies" customModuleProvider="target">
                                                 <rect key="frame" x="216" y="441.5" width="72" height="5"/>
                                                 <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                 <constraints>
@@ -98,7 +98,7 @@
                                                                 <nil key="textColor"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-cF-hf8" customClass="LineView" customModule="Movieflex" customModuleProvider="target">
+                                                            <view alpha="0.75" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sOa-cF-hf8" customClass="LineView" customModule="BruMovies" customModuleProvider="target">
                                                                 <rect key="frame" x="110" y="10.5" width="72" height="5"/>
                                                                 <color key="backgroundColor" systemColor="tertiaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.29999999999999999" colorSpace="custom" customColorSpace="sRGB"/>
                                                                 <constraints>
