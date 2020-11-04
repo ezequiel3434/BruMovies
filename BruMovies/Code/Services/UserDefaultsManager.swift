@@ -17,8 +17,8 @@ class UserDefaultsManager {
         return ids
     }
 
-    func getComingSoonList() -> [String] {
-        guard let ids = UserDefaults.standard.array(forKey: "ComingSoon") as? [String] else { return [] }
+    func getTopRatedList() -> [String] {
+        guard let ids = UserDefaults.standard.array(forKey: "TopRated") as? [String] else { return [] }
         return ids
     }
 
@@ -33,8 +33,8 @@ class UserDefaultsManager {
         UserDefaults.standard.set(titles, forKey: "NowPlaying")
     }
     
-    func setComingSoonList(titles: [String]) {
-        UserDefaults.standard.set(titles, forKey: "ComingSoon")
+    func setTopRatedList(titles: [String]) {
+        UserDefaults.standard.set(titles, forKey: "TopRated")
     }
     
     func setSubcriptionsList(titles: [String]){
