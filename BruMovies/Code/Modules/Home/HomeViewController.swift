@@ -22,7 +22,7 @@ class HomeViewController: UIViewController {
         "HomeViewController"
     }
     
-    var movieListViewModel: MovieViewModel!
+    var movieListViewModel: MovieListViewModel!
     
     let defaultsManager = UserDefaultsManager()
     let networkManager = NetworkManager.shared
@@ -40,6 +40,20 @@ class HomeViewController: UIViewController {
     //MARK: - LifeCycle methods for the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        // Now Playing
+        self.setCollectionView(for: nowPlayingCollectionView, with: LargeTitleCollectionViewCell().asNib(), and: LargeTitleCollectionViewCell.description())
+        
+        
+        
+        self.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
+        
+        /// bindings from the viewModels to update the View
+        self.movieListViewModel.nowPlayingMovies.bind { (_) in
+            self.nowPlayingCollectionView.reloadData()
+            self.visiblePaths.removeAll()
+        }
+        
 //        movieService = NetworkManager.shared
 //        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
 //
@@ -80,9 +94,48 @@ class HomeViewController: UIViewController {
         //print(NetworkManager.shared.getGenresBy(id: 16)!)
     }
     
-
     
-
-
+    //MARK: - functions for the view controller
+    
+    func setCollectionView(for collectionView: UICollectionView, with nib: UINib, and identifier: String) {
+        collectionView.delegate = self
+        collectionView.dataSource = self
+        collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+    }
+    
 }
 
+extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if (collectionView == nowPlayingCollectionView) {
+            return self.movieListViewModel.getCountForDisplay(type: .nowPlaying)
+        } else if (collectionView == topRatedCollectionView) {
+            return self.movieListViewModel.getCountForDisplay(type: .topRated)
+        } else {
+            return self.movieListViewModel.getCountForDisplay(type: .subscriptions)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        if collectionView == nowPlayingCollectionView {
+            guard let movieViewModels = movieListViewModel.nowPlayingMovies.value else { return UICollectionViewCell() }
+            return movieListViewModel.prepareCellForDisplay(collectionView: collectionView, type: .nowPlaying, indexPath: indexPath, movieViewModel: movieViewModels[indexPath.row])
+        } else if  collectionView == topRatedCollectionView {
+            guard let movieViewModels = movieListViewModel.topRatedMovies.value else { return UICollectionViewCell() }
+            return movieListViewModel.prepareCellForDisplay(collectionView: collectionView, type: .topRated, indexPath: indexPath, movieViewModel: movieViewModels[indexPath.row])
+        } else {
+            guard let movieViewModels = movieListViewModel.subscribedMovies.value else { return UICollectionViewCell() }
+            return movieListViewModel.prepareCellForDisplay(collectionView: collectionView, type: .subscriptions, indexPath: indexPath, movieViewModel: movieViewModels[indexPath.row])
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        if collectionView == nowPlayingCollectionView {
+            return collectionView.getSizeForHorizontalCollectionView(columns: 1, height: LargeTitleCollectionViewCell().cellHeight)
+        } else {
+            return CGSize()
+        }
+    }
+    
+    
+}

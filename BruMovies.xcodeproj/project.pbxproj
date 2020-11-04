@@ -35,6 +35,7 @@
 		37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A1255336610071C461 /* ViewExtensions.swift */; };
 		37D1F3A52553383D0071C461 /* UIViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A42553383D0071C461 /* UIViewAnimations.swift */; };
 		37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */; };
+		37D1F3A9255357CB0071C461 /* CellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A8255357CB0071C461 /* CellExtensions.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,6 +72,7 @@
 		37D1F3A1255336610071C461 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		37D1F3A42553383D0071C461 /* UIViewAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimations.swift; sourceTree = "<group>"; };
 		37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtension.swift; sourceTree = "<group>"; };
+		37D1F3A8255357CB0071C461 /* CellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellExtensions.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -147,6 +149,7 @@
 				37D1F3932551CCF90071C461 /* BundleExtensions.swift */,
 				37D1F3A1255336610071C461 /* ViewExtensions.swift */,
 				37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */,
+				37D1F3A8255357CB0071C461 /* CellExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -405,6 +408,7 @@
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
 				37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */,
 				37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */,
+				37D1F3A9255357CB0071C461 /* CellExtensions.swift in Sources */,
 				37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */,
 				37D1F38725514EC70071C461 /* MovieListViewModel.swift in Sources */,
 			);

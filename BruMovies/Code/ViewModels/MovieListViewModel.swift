@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 struct MovieListViewModel {
     enum ListType {
@@ -96,5 +97,42 @@ struct MovieListViewModel {
         
         
     }
+    
+}
+
+/// Methods for fetching data, used by the viewControllers
+
+extension MovieListViewModel {
+    /// methods for displaying cell data
+    func getCountForDisplay(type: ListType) -> Int {
+        if (type == .nowPlaying) {
+            guard let movieViewModels = self.nowPlayingMovies.value else { return 0 }
+            return movieViewModels.count
+        } else if (type == .topRated) {
+            guard let movieViewModels = self.topRatedMovies.value else { return 0 }
+            return movieViewModels.count
+        } else {
+            guard let movieViewModels = self.subscribedMovies.value else { return 0 }
+            return movieViewModels.count
+        }
+    }
+    
+    func prepareCellForDisplay(collectionView: UICollectionView, type: ListType, indexPath: IndexPath, movieViewModel: MovieViewModel) -> UICollectionViewCell {
+        if (type == .topRated || type == .subscriptions) {
+//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: , for: ) {
+//
+//            }
+            return UICollectionViewCell()
+        } else {
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeTitleCollectionViewCell.description(), for: indexPath) as? LargeTitleCollectionViewCell {
+                cell.setupCell(viewModel: movieViewModel)
+                return cell
+            }
+        }
+        fatalError()
+    }
+    
+    
+    
     
 }
