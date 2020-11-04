@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="LargeTitleCollectionViewCell" customModule="BruMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="450" height="280"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="450" height="280"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ppd-t8-qcN">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="280"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="oPG-xi-Vfg">
+                                <rect key="frame" x="0.0" y="0.0" width="450" height="210"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Batman" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fnq-Iv-sNK">
+                                <rect key="frame" x="0.0" y="218" width="60.5" height="24"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="u2v-Mw-FiU">
+                                <rect key="frame" x="0.0" y="244" width="38" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="W5L-xc-bKI">
+                                <rect key="frame" x="392" y="244" width="38" height="21"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="15"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oPG-xi-Vfg" secondAttribute="trailing" id="5AW-8m-pkU"/>
+                            <constraint firstItem="u2v-Mw-FiU" firstAttribute="leading" secondItem="Ppd-t8-qcN" secondAttribute="leading" id="6ML-tL-tct"/>
+                            <constraint firstItem="u2v-Mw-FiU" firstAttribute="top" secondItem="Fnq-Iv-sNK" secondAttribute="bottom" constant="2" id="8q4-0G-eAy"/>
+                            <constraint firstItem="oPG-xi-Vfg" firstAttribute="top" secondItem="Ppd-t8-qcN" secondAttribute="top" id="AaZ-8N-RKf"/>
+                            <constraint firstAttribute="trailing" secondItem="W5L-xc-bKI" secondAttribute="trailing" constant="20" id="JIR-8g-za7"/>
+                            <constraint firstItem="W5L-xc-bKI" firstAttribute="top" secondItem="u2v-Mw-FiU" secondAttribute="top" id="RzZ-Hw-YGt"/>
+                            <constraint firstItem="Fnq-Iv-sNK" firstAttribute="top" secondItem="oPG-xi-Vfg" secondAttribute="bottom" constant="8" id="TSz-63-ORQ"/>
+                            <constraint firstItem="Fnq-Iv-sNK" firstAttribute="leading" secondItem="Ppd-t8-qcN" secondAttribute="leading" id="ZZm-UZ-L4b"/>
+                            <constraint firstItem="oPG-xi-Vfg" firstAttribute="leading" secondItem="Ppd-t8-qcN" secondAttribute="leading" id="ld2-Qj-goU"/>
+                            <constraint firstItem="oPG-xi-Vfg" firstAttribute="height" secondItem="Ppd-t8-qcN" secondAttribute="height" multiplier="0.75" id="xmo-6o-fs5"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Ppd-t8-qcN" secondAttribute="bottom" id="0X3-fM-ApS"/>
+                <constraint firstItem="Ppd-t8-qcN" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="SpF-CW-XhF"/>
+                <constraint firstItem="Ppd-t8-qcN" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="eV4-7F-UxD"/>
+                <constraint firstAttribute="trailing" secondItem="Ppd-t8-qcN" secondAttribute="trailing" id="fzf-cC-Yma"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
+        </collectionViewCell>
+    </objects>
+</document>

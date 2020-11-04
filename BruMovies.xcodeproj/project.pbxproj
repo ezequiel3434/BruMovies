@@ -28,6 +28,9 @@
 		37D1F38F25516AEC0071C461 /* genres.json in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F38E25516AEC0071C461 /* genres.json */; };
 		37D1F39225516BD90071C461 /* LineView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39125516BD90071C461 /* LineView.swift */; };
 		37D1F3942551CCF90071C461 /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3932551CCF90071C461 /* BundleExtensions.swift */; };
+		37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3972552FD910071C461 /* LargeTitleCollectionViewCell.swift */; };
+		37D1F39A2552FD910071C461 /* LargeTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3982552FD910071C461 /* LargeTitleCollectionViewCell.xib */; };
+		37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39C255307E50071C461 /* ShimmerEffect.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -57,6 +60,9 @@
 		37D1F38E25516AEC0071C461 /* genres.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = genres.json; sourceTree = "<group>"; };
 		37D1F39125516BD90071C461 /* LineView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineView.swift; sourceTree = "<group>"; };
 		37D1F3932551CCF90071C461 /* BundleExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BundleExtensions.swift; sourceTree = "<group>"; };
+		37D1F3972552FD910071C461 /* LargeTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		37D1F3982552FD910071C461 /* LargeTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeTitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		37D1F39C255307E50071C461 /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -93,6 +99,7 @@
 		37029D42254DD96F0033D073 /* BruMovies */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F39B255307B90071C461 /* Effects&Layers */,
 				37029D5A254DDF400033D073 /* Code */,
 				37029D5C254DDF7C0033D073 /* Extensions */,
 				37029D5F254DF2E80033D073 /* SupportingFiles */,
@@ -144,6 +151,7 @@
 		37029D5E254DF2B60033D073 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F3952552FD140071C461 /* Cells */,
 				37029D47254DD96F0033D073 /* HomeViewController.swift */,
 				37029D49254DD96F0033D073 /* Home.storyboard */,
 				37AAE0752550C82E0009B6D5 /* RootTabViewController.swift */,
@@ -205,6 +213,31 @@
 				37D1F39125516BD90071C461 /* LineView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		37D1F3952552FD140071C461 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3962552FD370071C461 /* LargeTitleCollectionViewCell */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
+		37D1F3962552FD370071C461 /* LargeTitleCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3972552FD910071C461 /* LargeTitleCollectionViewCell.swift */,
+				37D1F3982552FD910071C461 /* LargeTitleCollectionViewCell.xib */,
+			);
+			path = LargeTitleCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		37D1F39B255307B90071C461 /* Effects&Layers */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F39C255307E50071C461 /* ShimmerEffect.swift */,
+			);
+			path = "Effects&Layers";
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -285,6 +318,7 @@
 			files = (
 				37029D53254DD9710033D073 /* LaunchScreen.storyboard in Resources */,
 				37029D50254DD9710033D073 /* Assets.xcassets in Resources */,
+				37D1F39A2552FD910071C461 /* LargeTitleCollectionViewCell.xib in Resources */,
 				37D1F38F25516AEC0071C461 /* genres.json in Resources */,
 				37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */,
 				37029D4B254DD96F0033D073 /* Home.storyboard in Resources */,
@@ -330,6 +364,7 @@
 				37D1F389255151B00071C461 /* BoxBind.swift in Sources */,
 				37D1F38B255154E60071C461 /* MovieViewModel.swift in Sources */,
 				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
+				37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
 				37D1F39225516BD90071C461 /* LineView.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
@@ -338,6 +373,7 @@
 				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
+				37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */,
 				37D1F38725514EC70071C461 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

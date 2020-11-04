@@ -22,15 +22,22 @@ class HomeViewController: UIViewController {
         "HomeViewController"
     }
     
+    var movieListViewModel: MovieViewModel!
+    
+    let defaultsManager = UserDefaultsManager()
+    let networkManager = NetworkManager.shared
+    let fileHandler = FileHandler()
     
     
+    var favoriteMoviesStackHeight: CGFloat = 0
     
-    
-    
+    var visiblePaths: [IndexPath] = [IndexPath]()
 //    let fileHandler = FileHandler()
 //    let networkManager = NetworkManager.shared
 //    var movieService: NetworkManager?
 //    let id = "724989"
+    
+    //MARK: - LifeCycle methods for the view controller
     override func viewDidLoad() {
         super.viewDidLoad()
 //        movieService = NetworkManager.shared
