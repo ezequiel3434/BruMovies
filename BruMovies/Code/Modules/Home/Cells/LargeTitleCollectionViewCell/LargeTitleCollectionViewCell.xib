@@ -64,6 +64,13 @@
                 <constraint firstAttribute="trailing" secondItem="Ppd-t8-qcN" secondAttribute="trailing" id="fzf-cC-Yma"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="backdropMoviewIMageView" destination="oPG-xi-Vfg" id="wtv-uc-yPG"/>
+                <outlet property="containerView" destination="Ppd-t8-qcN" id="Jnw-jf-N0k"/>
+                <outlet property="movieGenreLabel" destination="u2v-Mw-FiU" id="3Po-zx-xgI"/>
+                <outlet property="movieReleaseLabel" destination="W5L-xc-bKI" id="YR1-cM-Uxj"/>
+                <outlet property="movieTitleLabel" destination="Fnq-Iv-sNK" id="UFF-Dv-524"/>
+            </connections>
             <point key="canvasLocation" x="131.8840579710145" y="109.82142857142857"/>
         </collectionViewCell>
     </objects>

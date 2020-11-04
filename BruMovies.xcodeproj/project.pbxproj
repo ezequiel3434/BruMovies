@@ -31,6 +31,8 @@
 		37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3972552FD910071C461 /* LargeTitleCollectionViewCell.swift */; };
 		37D1F39A2552FD910071C461 /* LargeTitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3982552FD910071C461 /* LargeTitleCollectionViewCell.xib */; };
 		37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39C255307E50071C461 /* ShimmerEffect.swift */; };
+		37D1F3A0255311FF0071C461 /* Generic-Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39F255311FF0071C461 /* Generic-Protocols.swift */; };
+		37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A1255336610071C461 /* ViewExtensions.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -63,6 +65,8 @@
 		37D1F3972552FD910071C461 /* LargeTitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LargeTitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		37D1F3982552FD910071C461 /* LargeTitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LargeTitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		37D1F39C255307E50071C461 /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
+		37D1F39F255311FF0071C461 /* Generic-Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Generic-Protocols.swift"; sourceTree = "<group>"; };
+		37D1F3A1255336610071C461 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +115,7 @@
 		37029D5A254DDF400033D073 /* Code */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F39E255311470071C461 /* Utils */,
 				37D1F39025516BC40071C461 /* Views */,
 				3775032E254F521E00988B29 /* Models */,
 				37D1F38525514E960071C461 /* ViewModels */,
@@ -135,6 +140,7 @@
 			isa = PBXGroup;
 			children = (
 				37D1F3932551CCF90071C461 /* BundleExtensions.swift */,
+				37D1F3A1255336610071C461 /* ViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -165,7 +171,6 @@
 				37029D43254DD96F0033D073 /* AppDelegate.swift */,
 				37029D54254DD9710033D073 /* Info.plist */,
 				37029D4C254DD96F0033D073 /* BruMovies.xcdatamodeld */,
-				37750331254F606B00988B29 /* Utils.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -238,6 +243,15 @@
 				37D1F39C255307E50071C461 /* ShimmerEffect.swift */,
 			);
 			path = "Effects&Layers";
+			sourceTree = "<group>";
+		};
+		37D1F39E255311470071C461 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				37750331254F606B00988B29 /* Utils.swift */,
+				37D1F39F255311FF0071C461 /* Generic-Protocols.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -366,6 +380,7 @@
 				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
 				37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
+				37D1F3A0255311FF0071C461 /* Generic-Protocols.swift in Sources */,
 				37D1F39225516BD90071C461 /* LineView.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
@@ -374,6 +389,7 @@
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
 				37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */,
+				37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */,
 				37D1F38725514EC70071C461 /* MovieListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
