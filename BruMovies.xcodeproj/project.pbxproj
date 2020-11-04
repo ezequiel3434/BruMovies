@@ -36,6 +36,8 @@
 		37D1F3A52553383D0071C461 /* UIViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A42553383D0071C461 /* UIViewAnimations.swift */; };
 		37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */; };
 		37D1F3A9255357CB0071C461 /* CellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A8255357CB0071C461 /* CellExtensions.swift */; };
+		37D1F3AD255362130071C461 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */; };
+		37D1F3AE255362130071C461 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -73,6 +75,8 @@
 		37D1F3A42553383D0071C461 /* UIViewAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimations.swift; sourceTree = "<group>"; };
 		37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtension.swift; sourceTree = "<group>"; };
 		37D1F3A8255357CB0071C461 /* CellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellExtensions.swift; sourceTree = "<group>"; };
+		37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
+		37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -232,6 +236,7 @@
 		37D1F3952552FD140071C461 /* Cells */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F3AA255361F50071C461 /* TitleCollectionViewCell */,
 				37D1F3962552FD370071C461 /* LargeTitleCollectionViewCell */,
 			);
 			path = Cells;
@@ -269,6 +274,15 @@
 				37D1F3A42553383D0071C461 /* UIViewAnimations.swift */,
 			);
 			path = Animations;
+			sourceTree = "<group>";
+		};
+		37D1F3AA255361F50071C461 /* TitleCollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */,
+				37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */,
+			);
+			path = TitleCollectionViewCell;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -352,6 +366,7 @@
 				37D1F39A2552FD910071C461 /* LargeTitleCollectionViewCell.xib in Resources */,
 				37D1F38F25516AEC0071C461 /* genres.json in Resources */,
 				37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */,
+				37D1F3AE255362130071C461 /* TitleCollectionViewCell.xib in Resources */,
 				37029D4B254DD96F0033D073 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -397,6 +412,7 @@
 				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
 				37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
+				37D1F3AD255362130071C461 /* TitleCollectionViewCell.swift in Sources */,
 				37D1F3A0255311FF0071C461 /* Generic-Protocols.swift in Sources */,
 				37D1F39225516BD90071C461 /* LineView.swift in Sources */,
 				37750330254F524A00988B29 /* Movies.swift in Sources */,

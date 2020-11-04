@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="16097.3" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="TitleCollectionViewCell" customModule="BruMovies" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="140" height="240"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="140" height="240"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hvq-dW-59N">
+                        <rect key="frame" x="0.0" y="0.0" width="140" height="240"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xml-M2-ZER">
+                                <rect key="frame" x="0.0" y="0.0" width="140" height="180"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Omn-gu-a6P">
+                                <rect key="frame" x="0.0" y="184" width="43.5" height="23.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-DemiBold" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YiX-CH-XFr">
+                                <rect key="frame" x="0.0" y="209.5" width="35.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Omn-gu-a6P" firstAttribute="leading" secondItem="Hvq-dW-59N" secondAttribute="leading" id="2TA-X5-u73"/>
+                            <constraint firstAttribute="trailing" secondItem="xml-M2-ZER" secondAttribute="trailing" id="2sh-0F-eWp"/>
+                            <constraint firstItem="xml-M2-ZER" firstAttribute="leading" secondItem="Hvq-dW-59N" secondAttribute="leading" id="Av3-I5-tXc"/>
+                            <constraint firstItem="xml-M2-ZER" firstAttribute="height" secondItem="Hvq-dW-59N" secondAttribute="height" multiplier="0.75" id="FI8-RS-rJc"/>
+                            <constraint firstItem="xml-M2-ZER" firstAttribute="top" secondItem="Hvq-dW-59N" secondAttribute="top" id="a6d-8O-AAM"/>
+                            <constraint firstItem="YiX-CH-XFr" firstAttribute="top" secondItem="Omn-gu-a6P" secondAttribute="bottom" constant="2" id="q24-Om-sKY"/>
+                            <constraint firstItem="YiX-CH-XFr" firstAttribute="leading" secondItem="Hvq-dW-59N" secondAttribute="leading" id="tyx-mI-dvT"/>
+                            <constraint firstItem="Omn-gu-a6P" firstAttribute="top" secondItem="xml-M2-ZER" secondAttribute="bottom" constant="4" id="yLF-sn-bsh"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="Hvq-dW-59N" secondAttribute="trailing" id="3hb-Y4-ngP"/>
+                <constraint firstItem="Hvq-dW-59N" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="84R-od-QJw"/>
+                <constraint firstItem="Hvq-dW-59N" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="LFw-0q-cj2"/>
+                <constraint firstAttribute="bottom" secondItem="Hvq-dW-59N" secondAttribute="bottom" id="d4J-hr-JSf"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <connections>
+                <outlet property="containerView" destination="Hvq-dW-59N" id="lfh-m6-HQx"/>
+                <outlet property="movieGenreLabel" destination="YiX-CH-XFr" id="0fe-JT-bpf"/>
+                <outlet property="moviePosterImageView" destination="xml-M2-ZER" id="5sc-xs-DXA"/>
+                <outlet property="movieTitleLabel" destination="Omn-gu-a6P" id="EoI-Zf-BEO"/>
+            </connections>
+            <point key="canvasLocation" x="131.8840579710145" y="153.34821428571428"/>
+        </collectionViewCell>
+    </objects>
+</document>

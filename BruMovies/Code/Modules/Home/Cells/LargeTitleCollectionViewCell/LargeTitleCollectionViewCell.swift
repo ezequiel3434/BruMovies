@@ -74,7 +74,7 @@ class LargeTitleCollectionViewCell: UICollectionViewCell, ComponentShimmers {
         guard let viewModel = viewModel else { return }
         self.movieTitleLabel.text = viewModel.title
         self.movieGenreLabel.text = viewModel.genreText
-        self.movieReleaseLabel.text = viewModel.releaseDate
+        self.movieReleaseLabel.text = viewModel.yearText
         
         DispatchQueue.global().async {
             viewModel.movieBackDropImage.bind {
