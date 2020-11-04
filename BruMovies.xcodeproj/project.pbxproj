@@ -33,6 +33,8 @@
 		37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39C255307E50071C461 /* ShimmerEffect.swift */; };
 		37D1F3A0255311FF0071C461 /* Generic-Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39F255311FF0071C461 /* Generic-Protocols.swift */; };
 		37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A1255336610071C461 /* ViewExtensions.swift */; };
+		37D1F3A52553383D0071C461 /* UIViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A42553383D0071C461 /* UIViewAnimations.swift */; };
+		37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -67,6 +69,8 @@
 		37D1F39C255307E50071C461 /* ShimmerEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShimmerEffect.swift; sourceTree = "<group>"; };
 		37D1F39F255311FF0071C461 /* Generic-Protocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Generic-Protocols.swift"; sourceTree = "<group>"; };
 		37D1F3A1255336610071C461 /* ViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewExtensions.swift; sourceTree = "<group>"; };
+		37D1F3A42553383D0071C461 /* UIViewAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewAnimations.swift; sourceTree = "<group>"; };
+		37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreGraphicsExtension.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -103,6 +107,7 @@
 		37029D42254DD96F0033D073 /* BruMovies */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F3A3255338260071C461 /* Animations */,
 				37D1F39B255307B90071C461 /* Effects&Layers */,
 				37029D5A254DDF400033D073 /* Code */,
 				37029D5C254DDF7C0033D073 /* Extensions */,
@@ -141,6 +146,7 @@
 			children = (
 				37D1F3932551CCF90071C461 /* BundleExtensions.swift */,
 				37D1F3A1255336610071C461 /* ViewExtensions.swift */,
+				37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -252,6 +258,14 @@
 				37D1F39F255311FF0071C461 /* Generic-Protocols.swift */,
 			);
 			path = Utils;
+			sourceTree = "<group>";
+		};
+		37D1F3A3255338260071C461 /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3A42553383D0071C461 /* UIViewAnimations.swift */,
+			);
+			path = Animations;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -385,10 +399,12 @@
 				37750330254F524A00988B29 /* Movies.swift in Sources */,
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
 				37D1F3942551CCF90071C461 /* BundleExtensions.swift in Sources */,
+				37D1F3A52553383D0071C461 /* UIViewAnimations.swift in Sources */,
 				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
 				37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */,
+				37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */,
 				37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */,
 				37D1F38725514EC70071C461 /* MovieListViewModel.swift in Sources */,
 			);
