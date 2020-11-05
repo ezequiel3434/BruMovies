@@ -119,10 +119,11 @@ extension MovieListViewModel {
     
     func prepareCellForDisplay(collectionView: UICollectionView, type: ListType, indexPath: IndexPath, movieViewModel: MovieViewModel) -> UICollectionViewCell {
         if (type == .topRated || type == .subscriptions) {
-//            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: , for: ) {
-//
-//            }
-            return UICollectionViewCell()
+            if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TitleCollectionViewCell.description() , for: indexPath ) as? TitleCollectionViewCell {
+                cell.setupCell(viewModel: movieViewModel)
+                return cell
+            }
+            
         } else {
             if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: LargeTitleCollectionViewCell.description(), for: indexPath) as? LargeTitleCollectionViewCell {
                 cell.setupCell(viewModel: movieViewModel)

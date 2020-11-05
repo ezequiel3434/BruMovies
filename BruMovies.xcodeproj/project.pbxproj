@@ -38,6 +38,7 @@
 		37D1F3A9255357CB0071C461 /* CellExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A8255357CB0071C461 /* CellExtensions.swift */; };
 		37D1F3AD255362130071C461 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */; };
 		37D1F3AE255362130071C461 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */; };
+		37D1F3B025538A020071C461 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3AF25538A020071C461 /* MovieDetailViewModel.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		37D1F3A8255357CB0071C461 /* CellExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellExtensions.swift; sourceTree = "<group>"; };
 		37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
+		37D1F3AF25538A020071C461 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -221,6 +223,7 @@
 			children = (
 				37D1F38A255154E60071C461 /* MovieViewModel.swift */,
 				37D1F38625514EC70071C461 /* MovieListViewModel.swift */,
+				37D1F3AF25538A020071C461 /* MovieDetailViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -424,6 +427,7 @@
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
 				37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */,
 				37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */,
+				37D1F3B025538A020071C461 /* MovieDetailViewModel.swift in Sources */,
 				37D1F3A9255357CB0071C461 /* CellExtensions.swift in Sources */,
 				37D1F3A2255336610071C461 /* ViewExtensions.swift in Sources */,
 				37D1F38725514EC70071C461 /* MovieListViewModel.swift in Sources */,
