@@ -92,7 +92,6 @@ class NetworkManager: MovieService {
         self.loadURLAndDecode(url: url, params: [
             "language": "es-ES",
             "include_adult": "false",
-            "region": "AR",
             "query": query
         ], completion: completion)
     }
@@ -104,10 +103,11 @@ class NetworkManager: MovieService {
         }
         self.loadURLAndDecode(url: url, params: [
             "language": "es-ES",
-            "include_adult": "false",
-            "region": "AR"
+            "include_adult": "false"
         ], completion: completion)
     }
+    
+    //MARK: - get favourites
     
     
     

@@ -8,6 +8,9 @@
 
 import Foundation
 
+enum Subscriptions: String {
+    case subscribedMovies = "subscribedMovies"
+}
 
 protocol ComponentShimmers {
     var animationDuration: Double { get }
@@ -16,4 +19,12 @@ protocol ComponentShimmers {
     func showViews()
     func setShimmer()
     func removeShimmer()
+}
+
+
+protocol Likeable {
+    var subscribedType: Subscriptions { get }
+    
+    func likePressed(id: String) -> Bool
+    func checkIfFavorite(id: String) -> Bool
 }
