@@ -43,7 +43,7 @@ struct Movie: Decodable, Identifiable, Hashable {
     let overview: String?
     let voteAverage: Double
     let voteCount: Int
-    let runtime: Int?
+    let runtime: Double?
     let releaseDate: String?
     let genreIds: [Int]?
     let credits: MovieCredit?

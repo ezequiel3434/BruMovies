@@ -36,6 +36,7 @@ struct MovieDetailViewModel {
             switch result {
                 
             case .success(let movie):
+                print(movie)
                 if let titlePlotText = movie.overview {
                      self.moviePlot.value = titlePlotText
                 } else {

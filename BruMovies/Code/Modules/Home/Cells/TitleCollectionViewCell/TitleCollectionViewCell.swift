@@ -75,6 +75,7 @@ class TitleCollectionViewCell: UICollectionViewCell, ComponentShimmers {
        
     //MARK: - functions for the cell
     func setupCell(viewModel: MovieViewModel) {
+        setShimmer()
         self.movieTitleLabel.text = viewModel.title
         self.movieGenreLabel.text = viewModel.genreText
         

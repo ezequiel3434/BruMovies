@@ -148,4 +148,25 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
     }
     
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        var movieModel = MovieViewModel(meta: nil)
+        if collectionView == nowPlayingCollectionView {
+            guard let movieViewModels = movieListViewModel.nowPlayingMovies.value else { return }
+            movieModel = movieViewModels[indexPath.item]
+            //print(movieModel)
+        } else if collectionView == topRatedCollectionView {
+            guard let movieViewModels = movieListViewModel.topRatedMovies.value else { return }
+            movieModel = movieViewModels[indexPath.item]
+            //print(movieModel)
+        } else {
+            guard let movieViewModels = movieListViewModel.subscribedMovies.value else { return }
+            movieModel = movieViewModels[indexPath.item]
+        }
+        guard let movieDetailVC = storyboard?.instantiateViewController(identifier: MovieDetailViewController.description()) as? MovieDetailViewController else { return }
+        movieDetailVC.viewModel = movieModel
+        movieDetailVC.movieListViewModel = self.movieListViewModel
+        self.navigationController?.pushViewController(movieDetailVC, animated: true)
+    }
+    
+    
 }

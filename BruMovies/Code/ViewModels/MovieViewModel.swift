@@ -23,9 +23,11 @@ struct MovieViewModel {
     let backdropPath: String?
     let posterPath: String?
     let voteAverage: Double
+    let voteCount: Int
     let releaseDate: String?
-    
+    let overview: String?
     let genres: [Int]?
+    let runtime: Double?
     
     static private let yearFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -50,7 +52,7 @@ struct MovieViewModel {
     
     var genreText: String {
         if genres != nil {
-            return networkManager.getGenresBy(id: genres!.first!) ?? "n/a"
+            return networkManager.getGenresBy(id: genres!.first ?? 10751) ?? "n/a"
         } else {
             return "n/a"
         }
@@ -58,7 +60,7 @@ struct MovieViewModel {
     }
     
     var ratingText: String {
-        let rating = Int(voteAverage)
+        let rating = Int(voteAverage/2)
         let ratingText = (0..<rating).reduce("") { (acc, _) -> String in
             return acc + "★"
         }
@@ -69,7 +71,7 @@ struct MovieViewModel {
         guard ratingText.count > 0 else {
             return "n/a"
         }
-        return "\(ratingText.count)/10"
+        return "\((ratingText.count))/5"
     }
     
     var yearText: String {
@@ -81,12 +83,13 @@ struct MovieViewModel {
     var movieBackDropImage: BoxBind<UIImage?> = BoxBind(nil)
     var isFavorite: BoxBind<Bool?> = BoxBind(nil)
     
-    //        var durationText: String {
-    //            guard let runtime = self.runtime, runtime > 0 else {
-    //                return "n/a"
-    //            }
-    //            return Movie.durationFormatter.string(from: TimeInterval(runtime) * 60) ?? "n/a"
-    //        }
+            var durationText: String {
+                
+                guard let runtime = self.runtime, runtime > 0 else {
+                    return "n/a"
+                }
+                return MovieViewModel.durationFormatter.string(from: TimeInterval(runtime) * 60) ?? "n/a"
+            }
     
     //        var cast: [MovieCast]? {
     //            credits?.cast
@@ -119,11 +122,13 @@ struct MovieViewModel {
             self.backdropPath = ""
             self.posterPath = ""
             self.voteAverage = 0.0
+            self.voteCount = 0
             self.genres = []
             self.releaseDate = ""
             self.fileHandler = handler
             self.networkManager = networkManager
-            
+            self.overview = ""
+            self.runtime = 0.0
             return }
         
         self.id = meta.id
@@ -131,10 +136,14 @@ struct MovieViewModel {
         self.backdropPath = meta.backdropPath
         self.posterPath = meta.posterPath
         self.voteAverage = meta.voteAverage
+        self.voteCount = meta.voteCount
         self.genres = meta.genreIds
         self.releaseDate = meta.releaseDate
         self.fileHandler = handler
         self.networkManager = networkManager
+        self.overview = meta.overview
+        self.runtime = meta.runtime
+        
         getMovieImage(imageType: .poster)
         getMovieImage(imageType: .backdrop)
     }

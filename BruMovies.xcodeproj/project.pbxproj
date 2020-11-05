@@ -39,6 +39,15 @@
 		37D1F3AD255362130071C461 /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */; };
 		37D1F3AE255362130071C461 /* TitleCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */; };
 		37D1F3B025538A020071C461 /* MovieDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3AF25538A020071C461 /* MovieDetailViewModel.swift */; };
+		37D1F3B22553AAD50071C461 /* MovieDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3B12553AAD50071C461 /* MovieDetailViewController.swift */; };
+		37D1F3B52553B1400071C461 /* StrechyHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3B42553B1400071C461 /* StrechyHeaderView.swift */; };
+		37D1F3B72553B1590071C461 /* MovieOverviewTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3B62553B1590071C461 /* MovieOverviewTableViewCell.swift */; };
+		37D1F3B92553B16B0071C461 /* MovieRatingsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3B82553B16B0071C461 /* MovieRatingsTableViewCell.swift */; };
+		37D1F3BB2553B17E0071C461 /* UpdatesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3BA2553B17E0071C461 /* UpdatesTableViewCell.swift */; };
+		37D1F3BD2553B18D0071C461 /* CustomNavBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3BC2553B18D0071C461 /* CustomNavBar.swift */; };
+		37D1F3C02553B1B40071C461 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3BF2553B1B40071C461 /* UIView.swift */; };
+		37D1F3C22553B1C40071C461 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C12553B1C40071C461 /* Constants.swift */; };
+		37D1F3C42553DDE10071C461 /* ButtonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -79,6 +88,15 @@
 		37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCollectionViewCell.swift; sourceTree = "<group>"; };
 		37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCollectionViewCell.xib; sourceTree = "<group>"; };
 		37D1F3AF25538A020071C461 /* MovieDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewModel.swift; sourceTree = "<group>"; };
+		37D1F3B12553AAD50071C461 /* MovieDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailViewController.swift; sourceTree = "<group>"; };
+		37D1F3B42553B1400071C461 /* StrechyHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrechyHeaderView.swift; sourceTree = "<group>"; };
+		37D1F3B62553B1590071C461 /* MovieOverviewTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieOverviewTableViewCell.swift; sourceTree = "<group>"; };
+		37D1F3B82553B16B0071C461 /* MovieRatingsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRatingsTableViewCell.swift; sourceTree = "<group>"; };
+		37D1F3BA2553B17E0071C461 /* UpdatesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdatesTableViewCell.swift; sourceTree = "<group>"; };
+		37D1F3BC2553B18D0071C461 /* CustomNavBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavBar.swift; sourceTree = "<group>"; };
+		37D1F3BF2553B1B40071C461 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
+		37D1F3C12553B1C40071C461 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimations.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +194,7 @@
 				37029D47254DD96F0033D073 /* HomeViewController.swift */,
 				37029D49254DD96F0033D073 /* Home.storyboard */,
 				37AAE0752550C82E0009B6D5 /* RootTabViewController.swift */,
+				37D1F3B12553AAD50071C461 /* MovieDetailViewController.swift */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -231,6 +250,7 @@
 		37D1F39025516BC40071C461 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F3B32553B1270071C461 /* MovieDetailView */,
 				37D1F39125516BD90071C461 /* LineView.swift */,
 			);
 			path = Views;
@@ -275,6 +295,7 @@
 			isa = PBXGroup;
 			children = (
 				37D1F3A42553383D0071C461 /* UIViewAnimations.swift */,
+				37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */,
 			);
 			path = Animations;
 			sourceTree = "<group>";
@@ -286,6 +307,28 @@
 				37D1F3AC255362130071C461 /* TitleCollectionViewCell.xib */,
 			);
 			path = TitleCollectionViewCell;
+			sourceTree = "<group>";
+		};
+		37D1F3B32553B1270071C461 /* MovieDetailView */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3BE2553B1A70071C461 /* Utitlities */,
+				37D1F3B42553B1400071C461 /* StrechyHeaderView.swift */,
+				37D1F3B62553B1590071C461 /* MovieOverviewTableViewCell.swift */,
+				37D1F3B82553B16B0071C461 /* MovieRatingsTableViewCell.swift */,
+				37D1F3BA2553B17E0071C461 /* UpdatesTableViewCell.swift */,
+				37D1F3BC2553B18D0071C461 /* CustomNavBar.swift */,
+			);
+			path = MovieDetailView;
+			sourceTree = "<group>";
+		};
+		37D1F3BE2553B1A70071C461 /* Utitlities */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3BF2553B1B40071C461 /* UIView.swift */,
+				37D1F3C12553B1C40071C461 /* Constants.swift */,
+			);
+			path = Utitlities;
 			sourceTree = "<group>";
 		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
@@ -406,15 +449,23 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37D1F3C02553B1B40071C461 /* UIView.swift in Sources */,
 				37750335254F7A2100988B29 /* NetworkManager.swift in Sources */,
+				37D1F3BD2553B18D0071C461 /* CustomNavBar.swift in Sources */,
 				37AAE0762550C82E0009B6D5 /* RootTabViewController.swift in Sources */,
+				37D1F3B52553B1400071C461 /* StrechyHeaderView.swift in Sources */,
 				37750332254F606B00988B29 /* Utils.swift in Sources */,
 				37AAE0792550D2250009B6D5 /* MovieSearchViewController.swift in Sources */,
+				37D1F3B22553AAD50071C461 /* MovieDetailViewController.swift in Sources */,
 				37D1F389255151B00071C461 /* BoxBind.swift in Sources */,
 				37D1F38B255154E60071C461 /* MovieViewModel.swift in Sources */,
+				37D1F3BB2553B17E0071C461 /* UpdatesTableViewCell.swift in Sources */,
+				37D1F3B92553B16B0071C461 /* MovieRatingsTableViewCell.swift in Sources */,
 				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
 				37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */,
+				37D1F3B72553B1590071C461 /* MovieOverviewTableViewCell.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
+				37D1F3C42553DDE10071C461 /* ButtonAnimations.swift in Sources */,
 				37D1F3AD255362130071C461 /* TitleCollectionViewCell.swift in Sources */,
 				37D1F3A0255311FF0071C461 /* Generic-Protocols.swift in Sources */,
 				37D1F39225516BD90071C461 /* LineView.swift in Sources */,
@@ -422,6 +473,7 @@
 				37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */,
 				37D1F3942551CCF90071C461 /* BundleExtensions.swift in Sources */,
 				37D1F3A52553383D0071C461 /* UIViewAnimations.swift in Sources */,
+				37D1F3C22553B1C40071C461 /* Constants.swift in Sources */,
 				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,

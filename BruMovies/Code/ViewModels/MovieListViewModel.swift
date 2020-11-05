@@ -15,27 +15,27 @@ struct MovieListViewModel {
         case topRated
         case subscriptions
         
-        var getOptionName: String {
-            switch self {
-           
-            case .nowPlaying, .topRated:
-                return "No me interesa"
-           
-            case .subscriptions:
-                return "Remover"
-            }
-        }
-        
-        var symbol: String {
-            switch self {
-            
-             case .nowPlaying, .topRated:
-                 return "slash.circle.fill"
-            
-             case .subscriptions:
-                 return "trash.fill"
-             }
-        }
+//        var getOptionName: String {
+//            switch self {
+//
+//            case .nowPlaying, .topRated:
+//                return "No me interesa"
+//
+//            case .subscriptions:
+//                return "Remover"
+//            }
+//        }
+//
+//        var symbol: String {
+//            switch self {
+//
+//             case .nowPlaying, .topRated:
+//                 return "slash.circle.fill"
+//
+//             case .subscriptions:
+//                 return "trash.fill"
+//             }
+//        }
     }
     
     //MARK: - Variables for the view Model

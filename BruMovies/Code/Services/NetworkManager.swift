@@ -19,7 +19,7 @@ class NetworkManager: MovieService {
     private let urlSession = URLSession.shared
     private let jsonDecoder = Utils.jsonDecoder
     private let fileHandler = FileHandler()
-    private let imageCompressionScale: CGFloat = 0.25
+    private let imageCompressionScale: CGFloat = 1
     
     //MARK: - Genres Array
     
@@ -46,7 +46,10 @@ class NetworkManager: MovieService {
             
         }
         
-        loadURLAndDecode(url: url, completion: completion)
+        self.loadURLAndDecode(url: url, params: [
+            "language": "es-ES",
+            "include_adult": "false"
+        ], completion: completion)
         
     }
     
@@ -100,7 +103,9 @@ class NetworkManager: MovieService {
             return
         }
         self.loadURLAndDecode(url: url, params: [
-            "append_to_response": "credits"
+            "language": "es-ES",
+            "include_adult": "false",
+            "region": "AR"
         ], completion: completion)
     }
     
