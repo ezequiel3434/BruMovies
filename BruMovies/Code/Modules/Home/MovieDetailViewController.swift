@@ -61,6 +61,7 @@ class MovieDetailViewController: UIViewController {
         setUpConstraints()
         
         let headerView = StrechyHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
+        headerView.backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
         headerView.setupView(viewModel: viewModel)
         self.tableView.tableHeaderView = headerView
         navBar.setupNav(viewModel: viewModel)
@@ -76,6 +77,10 @@ class MovieDetailViewController: UIViewController {
             navBar.heightAnchor.constraint(equalToConstant: 100)
         ])
     }
+    @objc func backButtonPressed() {
+       self.navigationController?.popViewController(animated: true)
+               print("hola")
+               }
 
 }
 
@@ -143,7 +148,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
             
             UIView.animate(withDuration: 0.4) {
                 self.navBar.gameThumbImage.transform = CGAffineTransform(translationX: 0, y: 0)
-                self.navBar.getButton.transform = CGAffineTransform(translationX: 0, y: 0)
+//                self.navBar.getButton.transform = CGAffineTransform(translationX: 0, y: 0)
             }
             
         } else {
@@ -153,7 +158,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
             
             UIView.animate(withDuration: 0.4) {
                 self.navBar.gameThumbImage.transform = CGAffineTransform(translationX: 0, y: +50)
-                self.navBar.getButton.transform = CGAffineTransform(translationX: 0, y: +50)
+//                self.navBar.getButton.transform = CGAffineTransform(translationX: 0, y: +50)
             }
         }
     }

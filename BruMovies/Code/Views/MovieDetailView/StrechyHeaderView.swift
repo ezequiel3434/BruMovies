@@ -18,12 +18,46 @@ class StrechyHeaderView: UIView {
     
     var containerViewHeight = NSLayoutConstraint()
     
+//    let backButton:UIButton = {
+//           let btn = UIButton()
+//
+//           btn.translatesAutoresizingMaskIntoConstraints = false
+//           btn.layer.cornerRadius = 17.5
+//           btn.backgroundColor = UIColor.systemBlue
+//           btn.setTitle("SUSCRIPTO", for: .normal)
+//           btn.setTitleColor(.white, for: .normal)
+//           btn.setTitleColor(.blue, for: .highlighted)
+//           btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+//
+//           return btn
+//       }()
+    
+    let backButton: UIButton = {
+        let backButtonImage = UIImage(named:"back")?.withRenderingMode(.alwaysTemplate)
+        
+        let backButton = UIButton(type: .custom)
+        backButton.frame = CGRect(x: 0, y: 100, width: 50, height: 50)
+        backButton.backgroundColor = .white
+        backButton.layer.borderWidth = 3
+        backButton.layer.cornerRadius = 25
+        backButton.setImage(backButtonImage, for: .normal)
+        backButton.tintColor = .black
+        backButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 3)
+//        backButton.setTitle("  Back", for: .normal)
+//        backButton.setTitleColor(.black, for: .normal)
+        
+        
+        return backButton
+    }()
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
         
         createViews()
         setViewConstraints()
     }
+     
+       
     
     func createViews() {
         // Container View
@@ -35,7 +69,13 @@ class StrechyHeaderView: UIView {
         imageView.clipsToBounds = true
         imageView.backgroundColor = .yellow
         imageView.contentMode = .scaleAspectFill
+        imageView.isUserInteractionEnabled = true
+        backButton.isUserInteractionEnabled = true
+        //imageView.addSubview(backButton)
         containerView.addSubview(imageView)
+        containerView.addSubview(backButton)
+        
+        
     }
     
     func setViewConstraints() {
@@ -79,13 +119,15 @@ class StrechyHeaderView: UIView {
         
         DispatchQueue.global().async {
             viewModel.movieBackDropImage.bind {
-                guard let posterImage = $0 else { return }
+                guard let backDropImage = $0 else { return }
                 DispatchQueue.main.async { [unowned self] in
-                    self.imageView.image = posterImage
+                    self.imageView.image = backDropImage
                     
                 }
             }
         }
     }
+    
+   
     
 }

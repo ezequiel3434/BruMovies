@@ -142,7 +142,7 @@ class MovieRatingsTableViewCell: UITableViewCell {
             ratingCount.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 20),
             ratingCount.topAnchor.constraint(equalTo: ratings.bottomAnchor, constant: 2),
             
-            ageCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+            ageCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             ageCountLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             
             ageLabel.topAnchor.constraint(equalTo: ageCountLabel.bottomAnchor, constant: 2),

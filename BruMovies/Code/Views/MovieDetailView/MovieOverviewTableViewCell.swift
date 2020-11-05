@@ -19,6 +19,7 @@ var state = false
         img.layer.cornerRadius = 25
         img.image = UIImage(named: "logo")
         img.layer.masksToBounds = true
+        
         return img
     }()
     
@@ -43,6 +44,8 @@ var state = false
         return l
     }()
     
+   
+    
     let getButton:UIButton = {
         let btn = UIButton()
         
@@ -57,19 +60,20 @@ var state = false
         return btn
     }()
     
-    let moreBtn:UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.setBackgroundImage(UIImage(systemName: "ellipsis.circle.fill"), for: .normal)
-        return btn
-    }()
+//    let moreBtn:UIButton = {
+//        let btn = UIButton()
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.setBackgroundImage(UIImage(systemName: "ellipsis.circle.fill"), for: .normal)
+//        return btn
+//    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        
         addSubview(movieImageView)
         addSubview(movieTitle)
         addSubview(movieGenre)
-        addSubview(moreBtn)
+//        addSubview(moreBtn)
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector (tap))
 //        tapGesture.numberOfTapsRequired = 1
 //        getButton.addGestureRecognizer(tapGesture)
@@ -92,15 +96,17 @@ var state = false
             movieGenre.topAnchor.constraint(equalTo: movieTitle.bottomAnchor, constant: 5),
             movieGenre.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 20),
             
-            getButton.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 20),
+            getButton.leadingAnchor.constraint(equalTo: movieImageView.trailingAnchor, constant: 55),
             getButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             getButton.widthAnchor.constraint(equalToConstant: 120),
-            getButton.heightAnchor.constraint(equalToConstant: 35),
+            getButton.heightAnchor.constraint(equalToConstant: 35)
             
-            moreBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-            moreBtn.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-            moreBtn.widthAnchor.constraint(equalToConstant: 35),
-            moreBtn.heightAnchor.constraint(equalToConstant: 35)
+//            moreBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
+//            moreBtn.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
+//            moreBtn.widthAnchor.constraint(equalToConstant: 35),
+//            moreBtn.heightAnchor.constraint(equalToConstant: 35)
+            
+            
         ])
     }
     

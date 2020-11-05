@@ -29,25 +29,25 @@ class CustomNavBar: UIView {
         return img
     }()
     
-    let getButton:UIButton = {
-        let btn = UIButton()
-        btn.translatesAutoresizingMaskIntoConstraints = false
-        btn.layer.cornerRadius = 17.5
-        btn.backgroundColor = UIColor.systemBlue
-        btn.setTitle("GET", for: .normal)
-        btn.setTitleColor(.white, for: .normal)
-        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-        return btn
-    }()
+//    let getButton:UIButton = {
+//        let btn = UIButton()
+//        btn.translatesAutoresizingMaskIntoConstraints = false
+//        btn.layer.cornerRadius = 17.5
+//        btn.backgroundColor = UIColor.systemBlue
+//        btn.setTitle("GET", for: .normal)
+//        btn.setTitleColor(.white, for: .normal)
+//        btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
+//        return btn
+//    }()
 
     override init(frame: CGRect) {
         super.init(frame: frame)
         addSubview(cardView)
         cardView.addSubview(gameThumbImage)
-        cardView.addSubview(getButton)
+        //cardView.addSubview(getButton)
         setUpConstraints()
         gameThumbImage.transform = CGAffineTransform(translationX: 0, y: +50)
-        getButton.transform = CGAffineTransform(translationX: 0, y: +50)
+       // getButton.transform = CGAffineTransform(translationX: 0, y: +50)
     }
     
     func setUpConstraints(){
@@ -60,12 +60,12 @@ class CustomNavBar: UIView {
             gameThumbImage.widthAnchor.constraint(equalToConstant: 45),
             gameThumbImage.heightAnchor.constraint(equalToConstant: 70),
             gameThumbImage.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
-            gameThumbImage.centerXAnchor.constraint(equalTo: cardView.centerXAnchor),
+            gameThumbImage.centerXAnchor.constraint(equalTo: cardView.centerXAnchor)
             
-            getButton.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -15),
-            getButton.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
-            getButton.widthAnchor.constraint(equalToConstant: 80),
-            getButton.heightAnchor.constraint(equalToConstant: 35),
+//            getButton.trailingAnchor.constraint(equalTo: cardView.trailingAnchor, constant: -15),
+//            getButton.centerYAnchor.constraint(equalTo: cardView.centerYAnchor),
+//            getButton.widthAnchor.constraint(equalToConstant: 80),
+//            getButton.heightAnchor.constraint(equalToConstant: 35),
         ])
     }
     
