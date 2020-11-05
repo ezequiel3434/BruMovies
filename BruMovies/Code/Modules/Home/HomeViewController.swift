@@ -43,7 +43,8 @@ class HomeViewController: UIViewController {
         
         // Now Playing
         self.setCollectionView(for: nowPlayingCollectionView, with: LargeTitleCollectionViewCell().asNib(), and: LargeTitleCollectionViewCell.description())
-        
+        // Top Rated
+        self.setCollectionView(for: topRatedCollectionView, with: TitleCollectionViewCell().asNib(), and: TitleCollectionViewCell.description())
         
         
         self.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
@@ -51,6 +52,11 @@ class HomeViewController: UIViewController {
         /// bindings from the viewModels to update the View
         self.movieListViewModel.nowPlayingMovies.bind { (_) in
             self.nowPlayingCollectionView.reloadData()
+            self.visiblePaths.removeAll()
+        }
+        
+        self.movieListViewModel.topRatedMovies.bind { (_) in
+            self.topRatedCollectionView.reloadData()
             self.visiblePaths.removeAll()
         }
         
@@ -101,6 +107,7 @@ class HomeViewController: UIViewController {
         collectionView.delegate = self
         collectionView.dataSource = self
         collectionView.register(nib, forCellWithReuseIdentifier: identifier)
+        
     }
     
 }
@@ -110,6 +117,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if (collectionView == nowPlayingCollectionView) {
             return self.movieListViewModel.getCountForDisplay(type: .nowPlaying)
         } else if (collectionView == topRatedCollectionView) {
+            
             return self.movieListViewModel.getCountForDisplay(type: .topRated)
         } else {
             return self.movieListViewModel.getCountForDisplay(type: .subscriptions)
@@ -121,7 +129,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             guard let movieViewModels = movieListViewModel.nowPlayingMovies.value else { return UICollectionViewCell() }
             return movieListViewModel.prepareCellForDisplay(collectionView: collectionView, type: .nowPlaying, indexPath: indexPath, movieViewModel: movieViewModels[indexPath.row])
         } else if  collectionView == topRatedCollectionView {
+            
             guard let movieViewModels = movieListViewModel.topRatedMovies.value else { return UICollectionViewCell() }
+            
             return movieListViewModel.prepareCellForDisplay(collectionView: collectionView, type: .topRated, indexPath: indexPath, movieViewModel: movieViewModels[indexPath.row])
         } else {
             guard let movieViewModels = movieListViewModel.subscribedMovies.value else { return UICollectionViewCell() }
@@ -133,7 +143,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         if collectionView == nowPlayingCollectionView {
             return collectionView.getSizeForHorizontalCollectionView(columns: 1, height: LargeTitleCollectionViewCell().cellHeight)
         } else {
-            return CGSize()
+            return collectionView.getSizeForHorizontalCollectionView(columns: 2.4, height: TitleCollectionViewCell().cellHeight)
         }
     }
     
