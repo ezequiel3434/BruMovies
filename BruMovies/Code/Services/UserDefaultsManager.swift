@@ -11,17 +11,17 @@ import Foundation
 class UserDefaultsManager {
     
     //MARK: - getter functions
-
+    
     func getNowPlayingList() -> [String] {
         guard let ids = UserDefaults.standard.array(forKey: "NowPlaying") as? [String] else { return [] }
         return ids
     }
-
+    
     func getTopRatedList() -> [String] {
         guard let ids = UserDefaults.standard.array(forKey: "TopRated") as? [String] else { return [] }
         return ids
     }
-
+    
     func getSubcriptionsList() -> [Int] {
         guard let ids = UserDefaults.standard.array(forKey: "Subcriptions") as? [Int] else { return [] }
         return ids

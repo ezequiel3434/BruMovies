@@ -32,10 +32,6 @@ class HomeViewController: UIViewController {
     var subcriptionsMoviesStackHeight: CGFloat = 0
     
     var visiblePaths: [IndexPath] = [IndexPath]()
-//    let fileHandler = FileHandler()
-//    let networkManager = NetworkManager.shared
-//    var movieService: NetworkManager?
-//    let id = "724989"
     
     //MARK: - LifeCycle methods for the view controller
     override func viewDidLoad() {
@@ -49,7 +45,7 @@ class HomeViewController: UIViewController {
         self.setCollectionView(for: subscriptionsCollectionView, with: TitleCollectionViewCell().asNib(), and: TitleCollectionViewCell.description())
         
         self.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
-
+        
         self.subcriptionsMoviesStackHeight = self.subscriptionsStackView.frame.height
         
         self.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
@@ -66,14 +62,14 @@ class HomeViewController: UIViewController {
         }
         
         self.movieListViewModel.subscribedMovies.bind { movies in
-        if let movies = movies {
-            if (movies.isEmpty) {
-                self.subscriptionsStackView.isHidden = true
-            } else {
-             
-                self.subscriptionsStackView.isHidden = false
-                self.subscriptionsCollectionView.reloadData()
-            }
+            if let movies = movies {
+                if (movies.isEmpty) {
+                    self.subscriptionsStackView.isHidden = true
+                } else {
+                    
+                    self.subscriptionsStackView.isHidden = false
+                    self.subscriptionsCollectionView.reloadData()
+                }
             }
             
         }
@@ -87,44 +83,6 @@ class HomeViewController: UIViewController {
         }
         
         
-//        movieService = NetworkManager.shared
-//        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
-//
-//
-//                   switch result {
-//                   case .success(let response ):
-//                    let mov = response.results
-//                    print(mov.map { String(describing: $0.id)  })
-//
-//                   case .failure(let error):
-//                       print(error)
-//                   }
-//               }
-        
-//        self.movieService?.downloadMovieImage(urlString: "https://image.tmdb.org/t/p/w500/tsRy63Mu5cu8etL1X7ZLyf7UP1M.jpg", id: "724989", completion: { res, error in
-//        if (error == .none) {
-//            print(self.fileHandler.getPathForImage(id: self.id).path)
-//        }
-//        })
-        
-//
-//        self.movieService?.searchMovie(query: "batman", completion: { (result) in
-//            switch result {
-//            case .success(let response ):
-//             let mov = response.results
-//             print(mov)
-//             print(mov.map { String(describing: $0.id)  })
-//
-//            case .failure(let error):
-//                print(error)
-//            }
-//        })
-        
-
-        
-//        let response: genresID? = try? Bundle.main.loadAndDecodeJSON(filename: "genres")
-//       //print(response!.genres)
-        //print(NetworkManager.shared.getGenresBy(id: 16)!)
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -200,7 +158,7 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
         }
         guard let movieDetailVC = storyboard?.instantiateViewController(identifier: MovieDetailViewController.description()) as? MovieDetailViewController else { return }
         movieDetailVC.viewModel = movieModel
-       
+        
         movieDetailVC.movieListViewModel = self.movieListViewModel
         self.navigationController?.pushViewController(movieDetailVC, animated: true)
     }

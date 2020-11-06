@@ -23,7 +23,7 @@ enum MovieListEndpoint: String, CaseIterable, Identifiable {
     
     var description: String {
         switch self {
-        
+            
         case .nowPlaying: return "Now Playing"
         case .topRated: return "Top Rated"
         }
@@ -35,13 +35,7 @@ enum MovieListImage: String, CaseIterable, Identifiable {
     case poster = "poster"
     case backdrop = "backdrop"
     
-//    var description: String {
-//        switch self {
-//
-//        case .poster: return "Now Playing"
-//        case .backdrop: return "Top Rated"
-//        }
-//    }
+    
 }
 
 
@@ -54,7 +48,7 @@ enum MovieError: Error, CustomNSError {
     
     var localizedDescription: String {
         switch self {
-        
+            
         case .apiError:
             return "Failed to fetch data"
         case .invalidEndpoint:

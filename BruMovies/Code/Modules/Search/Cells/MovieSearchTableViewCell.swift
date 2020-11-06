@@ -44,7 +44,7 @@ class MovieSearchTableViewCell: UITableViewCell, ComponentShimmers {
         
         self.selectionStyle = .none
         hideViews()
-
+        
         self.moviePosterImageView.setCornerRadius(radius: cornerRadius - 4)
         self.containerView.setCornerRadius(radius: cornerRadius)
         self.containerView.setShadow(shadowColor: UIColor.label, shadowOpacity: 0.25, shadowRadius: 10, offset: CGSize(width: 1, height: 1))

@@ -96,25 +96,7 @@ struct MovieViewModel {
                 return MovieViewModel.durationFormatter.string(from: TimeInterval(runtime) * 60) ?? "n/a"
             }
     
-    //        var cast: [MovieCast]? {
-    //            credits?.cast
-    //        }
-    //        var crew: [MovieCrew]? {
-    //            credits?.crew
-    //        }
-    //
-    //        var directors: [MovieCrew]? {
-    //            crew?.filter{ $0.job.lowercased() == "director" }
-    //        }
-    //
-    //        var producers: [MovieCrew]? {
-    //            crew?.filter{ $0.job.lowercased() == "producer" }
-    //        }
-    //
-    //        var screenWriters: [MovieCrew]? {
-    //            crew?.filter{ $0.job.lowercased() == "story" }
-    //        }
-    //
+
     
     
     //MARK: - Initializer for the viewModel

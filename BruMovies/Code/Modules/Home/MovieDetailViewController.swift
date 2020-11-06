@@ -29,8 +29,6 @@ class MovieDetailViewController: UIViewController {
     
     lazy var tableView:UITableView = {
         let tv = UITableView()
-//        tv.overrideUserInterfaceStyle = .dark
-//        tv.backgroundColor = .systemBackground
         tv.backgroundColor = colors?.background.withAlphaComponent(0.8)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.delegate = self
@@ -40,8 +38,6 @@ class MovieDetailViewController: UIViewController {
         tv.register(UpdatesTableViewCell.self, forCellReuseIdentifier: "UpdatesTableViewCell")
         tv.showsVerticalScrollIndicator = false
         
-        
-        
         return tv
     }()
     
@@ -50,7 +46,7 @@ class MovieDetailViewController: UIViewController {
         v.controller = self
         v.translatesAutoresizingMaskIntoConstraints = false
         v.overrideUserInterfaceStyle = .dark
-        // not working..
+        
         v.backgroundColor = colors?.background.withAlphaComponent(0.8)
         
         v.layer.shadowRadius = 10
@@ -60,9 +56,11 @@ class MovieDetailViewController: UIViewController {
         return v
     }()
     
+    
     override var prefersStatusBarHidden: Bool {
         return true
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -76,11 +74,10 @@ class MovieDetailViewController: UIViewController {
     
     func setupViews() {
         
-        
         viewModel.colors.bind { (clrs) in
             self.colors = clrs
-                   
-               }
+            
+        }
         
         navBar.alpha = 0
         navBar.setupNav(viewModel: viewModel)
@@ -114,13 +111,15 @@ class MovieDetailViewController: UIViewController {
             navBar.topAnchor.constraint(equalTo: view.topAnchor),
             navBar.leadingAnchor.constraint(equalTo: view.leadingAnchor),
             navBar.trailingAnchor.constraint(equalTo: view.trailingAnchor),
-            navBar.heightAnchor.constraint(equalToConstant: 100)
+            navBar.heightAnchor.constraint(equalToConstant: 125)
         ])
     }
+    
+    
     @objc func backButtonPressed() {
-       self.navigationController?.popViewController(animated: true)
-               
-               }
+        self.navigationController?.popViewController(animated: true)
+        
+    }
     
     @objc func likeButtonPressed(_ sender: UIButton) {
         
@@ -137,7 +136,7 @@ class MovieDetailViewController: UIViewController {
             buttonAnimationFactory.makeDeactivateAnimation(for: sender)
         }
     }
-
+    
 }
 
 extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
@@ -150,7 +149,6 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieOverviewTableViewCell", for: indexPath) as! MovieOverviewTableViewCell
             cell.backgroundColor = .clear
-//            cell.overrideUserInterfaceStyle = .dark
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.frame.width)
             setupButton(button: cell.getButton)
@@ -161,9 +159,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         }
         if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieRatingsTableViewCell", for: indexPath) as! MovieRatingsTableViewCell
-//            cell.backgroundColor = .white
             cell.backgroundColor = .clear
-//            cell.overrideUserInterfaceStyle = .dark
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
             cell.setupCell(viewModel: viewModel)
@@ -172,8 +168,6 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UpdatesTableViewCell", for: indexPath) as! UpdatesTableViewCell
             cell.backgroundColor = .clear
-//            cell.overrideUserInterfaceStyle = .dark
-//            cell.backgroundColor = .systemBackground
             cell.headerLabel.textColor = colors?.secondary
             cell.descriptionLabel.textColor = colors?.primary
             cell.selectionStyle = .none
@@ -204,7 +198,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         let y = scrollView.contentOffset.y
         let v = y/210
         let value = Double(round(100*v)/100)
-        print(value)
+        //print(value)
         // It return 1 when header end reaches the height of navbar which is 160.
         
         if value >= 1.0 {
@@ -214,7 +208,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
             
             UIView.animate(withDuration: 0.4) {
                 self.navBar.gameThumbImage.transform = CGAffineTransform(translationX: 0, y: 0)
-//                self.navBar.getButton.transform = CGAffineTransform(translationX: 0, y: 0)
+              
             }
             
         } else {
@@ -224,7 +218,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
             
             UIView.animate(withDuration: 0.4) {
                 self.navBar.gameThumbImage.transform = CGAffineTransform(translationX: 0, y: +50)
-//                self.navBar.getButton.transform = CGAffineTransform(translationX: 0, y: +50)
+                
             }
         }
     }

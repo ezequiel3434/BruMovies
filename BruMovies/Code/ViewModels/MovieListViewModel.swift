@@ -15,27 +15,7 @@ struct MovieListViewModel {
         case topRated
         case subscriptions
         
-//        var getOptionName: String {
-//            switch self {
-//
-//            case .nowPlaying, .topRated:
-//                return "No me interesa"
-//
-//            case .subscriptions:
-//                return "Remover"
-//            }
-//        }
-//
-//        var symbol: String {
-//            switch self {
-//
-//             case .nowPlaying, .topRated:
-//                 return "slash.circle.fill"
-//
-//             case .subscriptions:
-//                 return "trash.fill"
-//             }
-//        }
+
     }
     
     //MARK: - Variables for the view Model
@@ -45,14 +25,10 @@ struct MovieListViewModel {
     
     var subscribedMovies: BoxBind<[MovieViewModel]?> = BoxBind([MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10))
     var nowPlayingMovies: BoxBind<[MovieViewModel]?> = BoxBind([MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10))
-    //[MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10)
     var topRatedMovies: BoxBind<[MovieViewModel]?> = BoxBind([MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10))
     
-//    var subscribedMoviesOffset: BoxBind<(Int,Int)> = BoxBind((0,10))
-//    var nowPlayingMoviesOffset: BoxBind<(Int,Int)> = BoxBind((0,10))
     
     var noData: BoxBind<(ListType?)> = BoxBind(nil)
-   // var updateCollection: BoxBind<(ListType,IndexPath)?> = BoxBind(nil)
     
     //MARK: - initializer for the viewModel
     init(defaultsManager: UserDefaultsManager, networkManager: NetworkManager, handler: FileHandler ) {
