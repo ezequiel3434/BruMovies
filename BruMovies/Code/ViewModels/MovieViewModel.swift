@@ -134,7 +134,7 @@ struct MovieViewModel {
         self.genreObj = meta.genres
         getMovieImage(imageType: .poster)
         getMovieImage(imageType: .backdrop)
-       getColors()
+       //getColors()
     }
     
     
@@ -178,8 +178,10 @@ struct MovieViewModel {
         DispatchQueue.global().async {
             self.moviePosterImage.bind {
                 guard let posterImage = $0 else { return }
-                
+                DispatchQueue.main.async {
                     self.colors.value = posterImage.getColors()
+                }
+                    
                     
                 
             }
