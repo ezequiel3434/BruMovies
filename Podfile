@@ -6,5 +6,6 @@ target 'BruMovies' do
   use_frameworks!
 
   # Pods for BruMovies
+  pod 'UIImageColors'
 
 end

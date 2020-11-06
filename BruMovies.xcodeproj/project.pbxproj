@@ -376,6 +376,7 @@
 				37029D3C254DD96F0033D073 /* Sources */,
 				37029D3D254DD96F0033D073 /* Frameworks */,
 				37029D3E254DD96F0033D073 /* Resources */,
+				81BA4659D1267BFC10CB72DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -438,6 +439,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		81BA4659D1267BFC10CB72DB /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BruMovies/Pods-BruMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-BruMovies/Pods-BruMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BruMovies/Pods-BruMovies-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		C7142E8F0A2441214C05D678 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;

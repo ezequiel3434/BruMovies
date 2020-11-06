@@ -176,7 +176,9 @@ class MovieRatingsTableViewCell: UITableViewCell {
 //            viewModel.moviePosterImage.bind {
 //                guard let posterImage = $0 else { return }
 //                DispatchQueue.main.async { [unowned self] in
-//                    self.gameImageView.image = posterImage
+//                    let colors = posterImage.getColors()
+//                    
+//                    self.backgroundColor = colors?.background
 //
 //                }
 //            }

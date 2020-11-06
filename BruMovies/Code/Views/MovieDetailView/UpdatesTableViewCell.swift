@@ -14,7 +14,7 @@ class UpdatesTableViewCell: UITableViewCell {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.text = "RESUMEN"
-        l.font = UIFont.systemFont(ofSize: 23, weight: .bold)
+        l.font = UIFont.systemFont(ofSize: 19, weight: .semibold)
         l.textColor = UIColor.label
         return l
     }()

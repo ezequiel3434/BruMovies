@@ -1,3 +1,16 @@
-PODFILE CHECKSUM: c280cea680a5ac9c02d8c74adc6aadb7b9aa618b
+PODS:
+  - UIImageColors (2.1.0)
 
-COCOAPODS: 1.9.3
+DEPENDENCIES:
+  - UIImageColors
+
+SPEC REPOS:
+  trunk:
+    - UIImageColors
+
+SPEC CHECKSUMS:
+  UIImageColors: d2ef3b0877d203cbb06489eeb78ea8b7788caabe
+
+PODFILE CHECKSUM: a75341ff4ab29efda89cb36f4972fae58349acae
+
+COCOAPODS: 1.10.0

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import UIImageColors
 
 class MovieDetailViewController: UIViewController {
     
@@ -24,11 +25,13 @@ class MovieDetailViewController: UIViewController {
     
     var detailViewModel: MovieDetailViewModel!
     let buttonAnimationFactory: ButtonAnimationFactory = ButtonAnimationFactory()
+    var colors: UIImageColors?
     
     lazy var tableView:UITableView = {
         let tv = UITableView()
 //        tv.overrideUserInterfaceStyle = .dark
-        tv.backgroundColor = .systemBackground
+//        tv.backgroundColor = .systemBackground
+        tv.backgroundColor = colors?.background.withAlphaComponent(0.8)
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.delegate = self
         tv.dataSource = self
@@ -36,6 +39,9 @@ class MovieDetailViewController: UIViewController {
         tv.register(MovieRatingsTableViewCell.self, forCellReuseIdentifier: "MovieRatingsTableViewCell")
         tv.register(UpdatesTableViewCell.self, forCellReuseIdentifier: "UpdatesTableViewCell")
         tv.showsVerticalScrollIndicator = false
+        
+        
+        
         return tv
     }()
     
@@ -45,17 +51,8 @@ class MovieDetailViewController: UIViewController {
         v.translatesAutoresizingMaskIntoConstraints = false
         v.overrideUserInterfaceStyle = .dark
         // not working..
-        v.backgroundColor =
-        UIColor { traitCollection in
-        // 2
-        switch traitCollection.userInterfaceStyle {
-        case .dark:
-          // 3
-          return UIColor(white: 0.3, alpha: 1.0)
-        default:
-          // 4
-          return UIColor(white: 1, alpha: 1.0)
-            }}
+        v.backgroundColor = colors?.background.withAlphaComponent(0.8)
+        
         v.layer.shadowRadius = 10
         v.layer.shadowColor = UIColor(white: 0, alpha: 0.1).cgColor
         v.layer.shadowOpacity = 1
@@ -80,6 +77,11 @@ class MovieDetailViewController: UIViewController {
     func setupViews() {
         navBar.setupNav(viewModel: viewModel)
         navBar.alpha = 0
+        
+        
+        
+        
+        
         view.addSubview(tableView)
         view.addSubview(navBar)
         tableView.pin(to: view)
@@ -144,19 +146,20 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieOverviewTableViewCell", for: indexPath) as! MovieOverviewTableViewCell
-            cell.backgroundColor = .systemBackground
+            cell.backgroundColor = .clear
 //            cell.overrideUserInterfaceStyle = .dark
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.frame.width)
             setupButton(button: cell.getButton)
             cell.getButton.addTarget(self, action: #selector(likeButtonPressed), for: .touchUpInside)
+            cell.movieTitle.textColor = colors?.detail
             cell.setupCell(viewModel: viewModel)
             return cell
         }
         if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieRatingsTableViewCell", for: indexPath) as! MovieRatingsTableViewCell
 //            cell.backgroundColor = .white
-            cell.backgroundColor = .systemBackground
+            cell.backgroundColor = .clear
 //            cell.overrideUserInterfaceStyle = .dark
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -165,9 +168,11 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         }
         if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UpdatesTableViewCell", for: indexPath) as! UpdatesTableViewCell
-//            cell.backgroundColor = .white
+            cell.backgroundColor = .clear
 //            cell.overrideUserInterfaceStyle = .dark
-            cell.backgroundColor = .systemBackground
+//            cell.backgroundColor = .systemBackground
+            cell.headerLabel.textColor = colors?.secondary
+            cell.descriptionLabel.textColor = colors?.primary
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
             cell.setupCell(viewModel: viewModel)

@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import UIImageColors
 
 /// The MovieViewModel consumes a movie model and provides the required data to be used by the viewControlers.
 /// This viewModel is used by the cells and by the listViewModels for providing the data.
@@ -84,6 +85,8 @@ struct MovieViewModel {
     var moviePosterImage: BoxBind<UIImage?> = BoxBind(nil)
     var movieBackDropImage: BoxBind<UIImage?> = BoxBind(nil)
     var isFavorite: BoxBind<Bool?> = BoxBind(nil)
+    var colors: BoxBind<UIImageColors?> = BoxBind(nil)
+    
     
             var durationText: String {
                 
@@ -149,6 +152,7 @@ struct MovieViewModel {
         self.genreObj = meta.genres
         getMovieImage(imageType: .poster)
         getMovieImage(imageType: .backdrop)
+       getColors()
     }
     
     
@@ -160,10 +164,12 @@ struct MovieViewModel {
             if (fileHandler.checkIfFileExists(id: id, imageType: imageType)) {
                 
                 self.moviePosterImage.value = UIImage(contentsOfFile: fileHandler.getPathForImage(id: id, imageType: imageType).path)
+                
             } else {
                 networkManager.downloadMovieImage(url: self.posterURL, imageType: imageType, id: self.id) { res, error in
                     if (error == .none) {
                         self.moviePosterImage.value = UIImage(contentsOfFile: self.fileHandler.getPathForImage(id: self.id, imageType: imageType).path)
+                        
                     }
                 }
             }
@@ -179,6 +185,24 @@ struct MovieViewModel {
                 }
             }
         }
+        
+        
+        
+        
+    }
+    
+    func getColors() {
+        
+        DispatchQueue.global().async {
+            self.moviePosterImage.bind {
+                guard let posterImage = $0 else { return }
+                
+                    self.colors.value = posterImage.getColors()
+                    
+                
+            }
+        }
+        
         
         
     }
