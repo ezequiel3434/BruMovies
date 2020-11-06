@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieSearchViewCell: UITableViewCell, ComponentShimmers {
+class MovieSearchTableViewCell: UITableViewCell, ComponentShimmers {
     
     // MARK:- outlets for the cell
     @IBOutlet weak var containerView: UIView!
@@ -21,7 +21,7 @@ class MovieSearchViewCell: UITableViewCell, ComponentShimmers {
     
     // MARK:- variables for the cell
     override class func description() -> String {
-        return "MovieSearchViewCell"
+        return "MovieSearchTableViewCell"
     }
     
     

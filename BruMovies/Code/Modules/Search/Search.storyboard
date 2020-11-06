@@ -14,9 +14,54 @@
                     <view key="view" contentMode="scaleToFill" id="sAO-H7-ctG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="BUSCADOR" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WbI-2n-bkr">
+                                <rect key="frame" x="144.5" y="68" width="125.5" height="30.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Bold" family="Avenir Next" pointSize="22"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Busca tu pelicula favorita y suscríbete con un like." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="3" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9QM-3U-68X">
+                                <rect key="frame" x="24" y="118.5" width="366" height="46.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <searchBar contentMode="redraw" searchBarStyle="minimal" placeholder="Escribe tu pelicula" showsCancelButton="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U1A-xh-hHU">
+                                <rect key="frame" x="24" y="193" width="366" height="42"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="42" id="M8j-X1-Dfi"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="barTintColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES"/>
+                            </searchBar>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="XfX-W0-yzO">
+                                <rect key="frame" x="0.0" y="259" width="414" height="637"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="WbI-2n-bkr" firstAttribute="top" secondItem="aMA-fX-yL2" secondAttribute="top" constant="24" id="1Rt-vE-bjt"/>
+                            <constraint firstItem="XfX-W0-yzO" firstAttribute="top" secondItem="U1A-xh-hHU" secondAttribute="bottom" constant="24" id="649-7K-2pP"/>
+                            <constraint firstAttribute="trailing" secondItem="U1A-xh-hHU" secondAttribute="trailing" constant="24" id="6Xb-Um-lmQ"/>
+                            <constraint firstItem="9QM-3U-68X" firstAttribute="leading" secondItem="aMA-fX-yL2" secondAttribute="leading" constant="24" id="EXf-ij-Scd"/>
+                            <constraint firstItem="aMA-fX-yL2" firstAttribute="trailing" secondItem="XfX-W0-yzO" secondAttribute="trailing" id="HhY-E7-rHf"/>
+                            <constraint firstItem="U1A-xh-hHU" firstAttribute="top" secondItem="9QM-3U-68X" secondAttribute="bottom" constant="28" id="Nw3-Kf-KbU"/>
+                            <constraint firstItem="U1A-xh-hHU" firstAttribute="leading" secondItem="aMA-fX-yL2" secondAttribute="leading" constant="24" id="U09-tZ-xd1"/>
+                            <constraint firstItem="aMA-fX-yL2" firstAttribute="trailing" secondItem="9QM-3U-68X" secondAttribute="trailing" constant="24" id="Z3X-tP-pDE"/>
+                            <constraint firstItem="9QM-3U-68X" firstAttribute="top" secondItem="WbI-2n-bkr" secondAttribute="bottom" constant="20" id="eLT-nb-rX1"/>
+                            <constraint firstItem="WbI-2n-bkr" firstAttribute="centerX" secondItem="sAO-H7-ctG" secondAttribute="centerX" id="eco-m5-A62"/>
+                            <constraint firstAttribute="bottom" secondItem="XfX-W0-yzO" secondAttribute="bottom" id="hPR-Em-etv"/>
+                            <constraint firstItem="XfX-W0-yzO" firstAttribute="leading" secondItem="aMA-fX-yL2" secondAttribute="leading" id="jZn-bn-y79"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="aMA-fX-yL2"/>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="U1A-xh-hHU" id="lRd-9q-TUo"/>
+                        <outlet property="searchTableView" destination="XfX-W0-yzO" id="1GB-bH-E0j"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="XU4-XO-tsX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
