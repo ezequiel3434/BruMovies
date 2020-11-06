@@ -49,6 +49,8 @@
 		37D1F3C22553B1C40071C461 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C12553B1C40071C461 /* Constants.swift */; };
 		37D1F3C42553DDE10071C461 /* ButtonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */; };
 		37D1F3C62555307F0071C461 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C52555307E0071C461 /* SearchViewModel.swift */; };
+		37D1F3CA255536F10071C461 /* MovieSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C8255536F10071C461 /* MovieSearchTableViewCell.swift */; };
+		37D1F3CB255536F10071C461 /* MovieSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3C9255536F10071C461 /* MovieSearchTableViewCell.xib */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -99,6 +101,8 @@
 		37D1F3C12553B1C40071C461 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimations.swift; sourceTree = "<group>"; };
 		37D1F3C52555307E0071C461 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		37D1F3C8255536F10071C461 /* MovieSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewCell.swift; sourceTree = "<group>"; };
+		37D1F3C9255536F10071C461 /* MovieSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSearchTableViewCell.xib; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -233,6 +237,7 @@
 		37AAE0772550D0B00009B6D5 /* Search */ = {
 			isa = PBXGroup;
 			children = (
+				37D1F3C7255536B90071C461 /* Cells */,
 				37AAE0782550D2250009B6D5 /* MovieSearchViewController.swift */,
 				37AAE07A2550D4630009B6D5 /* Search.storyboard */,
 			);
@@ -334,6 +339,15 @@
 			path = Utitlities;
 			sourceTree = "<group>";
 		};
+		37D1F3C7255536B90071C461 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				37D1F3C8255536F10071C461 /* MovieSearchTableViewCell.swift */,
+				37D1F3C9255536F10071C461 /* MovieSearchTableViewCell.xib */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -416,6 +430,7 @@
 				37D1F38F25516AEC0071C461 /* genres.json in Resources */,
 				37AAE07B2550D4630009B6D5 /* Search.storyboard in Resources */,
 				37D1F3AE255362130071C461 /* TitleCollectionViewCell.xib in Resources */,
+				37D1F3CB255536F10071C461 /* MovieSearchTableViewCell.xib in Resources */,
 				37029D4B254DD96F0033D073 /* Home.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -466,6 +481,7 @@
 				37D1F3BB2553B17E0071C461 /* UpdatesTableViewCell.swift in Sources */,
 				37D1F3B92553B16B0071C461 /* MovieRatingsTableViewCell.swift in Sources */,
 				37029D48254DD96F0033D073 /* HomeViewController.swift in Sources */,
+				37D1F3CA255536F10071C461 /* MovieSearchTableViewCell.swift in Sources */,
 				37D1F3992552FD910071C461 /* LargeTitleCollectionViewCell.swift in Sources */,
 				37D1F3B72553B1590071C461 /* MovieOverviewTableViewCell.swift in Sources */,
 				37029D44254DD96F0033D073 /* AppDelegate.swift in Sources */,
