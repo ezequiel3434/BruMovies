@@ -55,6 +55,15 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.detailViewModel = MovieDetailViewModel(movieId: viewModel.id, handler: fileHandler, networkManager: networkManager, defaultsManager: defaultsManager)
+        
+        setupViews()
+        
+        
+    }
+    
+    func setupViews() {
+        
         view.addSubview(tableView)
         view.addSubview(navBar)
         tableView.pin(to: view)
@@ -62,11 +71,22 @@ class MovieDetailViewController: UIViewController {
         
         let headerView = StrechyHeaderView(frame: CGRect(x: 0, y: 0, width: self.view.bounds.width, height: 250))
         headerView.backButton.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+        
         headerView.setupView(viewModel: viewModel)
         self.tableView.tableHeaderView = headerView
         navBar.setupNav(viewModel: viewModel)
         navBar.alpha = 0
-        
+    }
+    
+    func setupButton(button: UIButton) {
+        if let status = self.detailViewModel?.checkIfSubscribed(id: viewModel.id) {
+            if (status) {
+                button.tintColor = .red
+                button.setTitle("SUSCRIPTO", for: .normal)
+                button.backgroundColor = .red
+                
+            }
+        }
     }
     
     func setUpConstraints(){
@@ -79,8 +99,24 @@ class MovieDetailViewController: UIViewController {
     }
     @objc func backButtonPressed() {
        self.navigationController?.popViewController(animated: true)
-               print("hola")
+               
                }
+    
+    @objc func likeButtonPressed(_ sender: UIButton) {
+        
+        
+        guard let viewModel = viewModel, let detailViewModel = detailViewModel, let movieListViewModel = movieListViewModel else {
+            
+            return }
+        let status = detailViewModel.subscribePressed(id: viewModel.id)
+        movieListViewModel.getSubscribedMovies()
+        
+        if (status) {
+            buttonAnimationFactory.makeActivateAnimation(for: sender)
+        } else {
+            buttonAnimationFactory.makeDeactivateAnimation(for: sender)
+        }
+    }
 
 }
 
@@ -96,6 +132,8 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
             cell.backgroundColor = .white
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.frame.width)
+            setupButton(button: cell.getButton)
+            cell.getButton.addTarget(self, action: #selector(likeButtonPressed), for: .touchUpInside)
             cell.setupCell(viewModel: viewModel)
             return cell
         }

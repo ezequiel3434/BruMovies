@@ -29,7 +29,7 @@ class HomeViewController: UIViewController {
     let fileHandler = FileHandler()
     
     
-    var favoriteMoviesStackHeight: CGFloat = 0
+    var subcriptionsMoviesStackHeight: CGFloat = 0
     
     var visiblePaths: [IndexPath] = [IndexPath]()
 //    let fileHandler = FileHandler()
@@ -45,7 +45,12 @@ class HomeViewController: UIViewController {
         self.setCollectionView(for: nowPlayingCollectionView, with: LargeTitleCollectionViewCell().asNib(), and: LargeTitleCollectionViewCell.description())
         // Top Rated
         self.setCollectionView(for: topRatedCollectionView, with: TitleCollectionViewCell().asNib(), and: TitleCollectionViewCell.description())
+        // Subscribed movies
+        self.setCollectionView(for: subscriptionsCollectionView, with: TitleCollectionViewCell().asNib(), and: TitleCollectionViewCell.description())
         
+        self.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
+
+        self.subcriptionsMoviesStackHeight = self.subscriptionsStackView.frame.height
         
         self.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
         
@@ -59,6 +64,28 @@ class HomeViewController: UIViewController {
             self.topRatedCollectionView.reloadData()
             self.visiblePaths.removeAll()
         }
+        
+        self.movieListViewModel.subscribedMovies.bind { movies in
+        if let movies = movies {
+            if (movies.isEmpty) {
+                self.subscriptionsStackView.isHidden = true
+            } else {
+             
+                self.subscriptionsStackView.isHidden = false
+                self.subscriptionsCollectionView.reloadData()
+            }
+            }
+            
+        }
+        
+        self.movieListViewModel.noData.bind {
+            guard let noDataType = $0 else { return }
+            if (noDataType == .subscriptions) {
+                self.subscriptionsStackView.isHidden = true
+                
+            }
+        }
+        
         
 //        movieService = NetworkManager.shared
 //        self.movieService!.fetchMovies(from: .nowPlaying  ) { (result) in
@@ -98,6 +125,13 @@ class HomeViewController: UIViewController {
 //        let response: genresID? = try? Bundle.main.loadAndDecodeJSON(filename: "genres")
 //       //print(response!.genres)
         //print(NetworkManager.shared.getGenresBy(id: 16)!)
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        self.movieListViewModel.getSubscribedMovies()
+        
     }
     
     
@@ -159,7 +193,9 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             movieModel = movieViewModels[indexPath.item]
             //print(movieModel)
         } else {
+            
             guard let movieViewModels = movieListViewModel.subscribedMovies.value else { return }
+            
             movieModel = movieViewModels[indexPath.item]
         }
         guard let movieDetailVC = storyboard?.instantiateViewController(identifier: MovieDetailViewController.description()) as? MovieDetailViewController else { return }

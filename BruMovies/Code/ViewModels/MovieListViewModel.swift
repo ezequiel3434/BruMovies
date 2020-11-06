@@ -43,15 +43,15 @@ struct MovieListViewModel {
     let networkManager: NetworkManager
     let fileHandler: FileHandler
     
-    var subscribedMovies: BoxBind<[MovieViewModel]?> = BoxBind(nil)
-    var nowPlayingMovies: BoxBind<[MovieViewModel]?> = BoxBind(nil)
+    var subscribedMovies: BoxBind<[MovieViewModel]?> = BoxBind([MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10))
+    var nowPlayingMovies: BoxBind<[MovieViewModel]?> = BoxBind([MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10))
     //[MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10)
-    var topRatedMovies: BoxBind<[MovieViewModel]?> = BoxBind(nil)
+    var topRatedMovies: BoxBind<[MovieViewModel]?> = BoxBind([MovieViewModel](repeating: MovieViewModel(meta: nil), count: 10))
     
 //    var subscribedMoviesOffset: BoxBind<(Int,Int)> = BoxBind((0,10))
 //    var nowPlayingMoviesOffset: BoxBind<(Int,Int)> = BoxBind((0,10))
     
-   // var noData: BoxBind<(ListType?)> = BoxBind(nil)
+    var noData: BoxBind<(ListType?)> = BoxBind(nil)
    // var updateCollection: BoxBind<(ListType,IndexPath)?> = BoxBind(nil)
     
     //MARK: - initializer for the viewModel
@@ -131,6 +131,31 @@ extension MovieListViewModel {
             }
         }
         fatalError()
+    }
+    
+    
+    func getSubscribedMovies() {
+        let subscribed = defaultsManager.getSubcriptionsList()
+
+        if (subscribed.isEmpty) {
+            self.noData.value = .subscriptions
+            
+        } else {
+            self.noData.value = .none
+            // If there's no change don't call the API
+            if let subsArray = self.subscribedMovies.value {
+                if (subsArray.count == subscribed.count && subscribed.count != 1) {
+                    return
+                } else {
+                    
+                    networkManager.getSubscribedMovies(ids: Array(subscribed), completion: { (res, error) in
+                        
+                        guard let titlesMetaData = res else { return }
+                        self.subscribedMovies.value = titlesMetaData.map { MovieViewModel(meta: $0)}.sorted { $0.id < $1.id}
+                    })
+                }
+            }
+        }
     }
     
     

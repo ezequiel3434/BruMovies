@@ -77,7 +77,12 @@ class TitleCollectionViewCell: UICollectionViewCell, ComponentShimmers {
     func setupCell(viewModel: MovieViewModel) {
         setShimmer()
         self.movieTitleLabel.text = viewModel.title
-        self.movieGenreLabel.text = viewModel.genreText
+        if viewModel.genreText == "n/a" {
+            self.movieGenreLabel.text = viewModel.genreObj?.first?.name
+        } else {
+            self.movieGenreLabel.text = viewModel.genreText
+        }
+        
         
         DispatchQueue.global().async {
             viewModel.moviePosterImage.bind {

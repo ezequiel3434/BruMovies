@@ -28,6 +28,8 @@ struct MovieViewModel {
     let overview: String?
     let genres: [Int]?
     let runtime: Double?
+    let genreObj: [genre]?
+    
     
     static private let yearFormatter: DateFormatter = {
         let formatter = DateFormatter()
@@ -129,6 +131,7 @@ struct MovieViewModel {
             self.networkManager = networkManager
             self.overview = ""
             self.runtime = 0.0
+            self.genreObj = [genre]()
             return }
         
         self.id = meta.id
@@ -143,7 +146,7 @@ struct MovieViewModel {
         self.networkManager = networkManager
         self.overview = meta.overview
         self.runtime = meta.runtime
-        
+        self.genreObj = meta.genres
         getMovieImage(imageType: .poster)
         getMovieImage(imageType: .backdrop)
     }

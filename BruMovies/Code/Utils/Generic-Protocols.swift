@@ -25,6 +25,6 @@ protocol ComponentShimmers {
 protocol Likeable {
     var subscribedType: Subscriptions { get }
     
-    func likePressed(id: String) -> Bool
-    func checkIfFavorite(id: String) -> Bool
+    func subscribePressed(id: Int) -> Bool
+    func checkIfSubscribed(id: Int) -> Bool
 }

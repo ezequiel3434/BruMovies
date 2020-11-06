@@ -46,6 +46,7 @@ struct Movie: Decodable, Identifiable, Hashable {
     let runtime: Double?
     let releaseDate: String?
     let genreIds: [Int]?
+    let genres: [genre]?
     let credits: MovieCredit?
     
     

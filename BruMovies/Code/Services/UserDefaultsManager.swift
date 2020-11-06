@@ -22,8 +22,8 @@ class UserDefaultsManager {
         return ids
     }
 
-    func getSubcriptionsList() -> [String] {
-        guard let ids = UserDefaults.standard.array(forKey: "Subcriptions") as? [String] else { return [] }
+    func getSubcriptionsList() -> [Int] {
+        guard let ids = UserDefaults.standard.array(forKey: "Subcriptions") as? [Int] else { return [] }
         return ids
     }
     
@@ -37,14 +37,14 @@ class UserDefaultsManager {
         UserDefaults.standard.set(titles, forKey: "TopRated")
     }
     
-    func setSubcriptionsList(titles: [String]){
+    func setSubcriptionsList(titles: [Int]){
         UserDefaults.standard.set(titles, forKey: "Subcriptions")
     }
     
     //MARK: - Subcriptions
     
     @discardableResult
-    func toggleSubcriptions(id: String) -> Bool {
+    func toggleSubcriptions(id: Int) -> Bool {
         let subcriptions = getSubcriptionsList()
         
         if subcriptions.contains(id) {
@@ -58,20 +58,20 @@ class UserDefaultsManager {
     
     
     @discardableResult
-    func removeFromSubcriptions(id: String, subcriptions: [String]) -> Bool {
+    func removeFromSubcriptions(id: Int, subcriptions: [Int]) -> Bool {
         self.setSubcriptionsList(titles: subcriptions.filter{$0 != id})
         return true
     }
     
     @discardableResult
-    func addToSubcriptions(id: String, subcriptions: [String]) -> Bool {
+    func addToSubcriptions(id: Int, subcriptions: [Int]) -> Bool {
         var newSubcriptions = subcriptions
         newSubcriptions.append(id)
         self.setSubcriptionsList(titles: newSubcriptions)
         return true
     }
     
-    func checkIfSubcription(id: String) -> Bool {
+    func checkIfSubcription(id: Int) -> Bool {
         let subcriptions = getSubcriptionsList()
         if subcriptions.contains(id) {
             return true

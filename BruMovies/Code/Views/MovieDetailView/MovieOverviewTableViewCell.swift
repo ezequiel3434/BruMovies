@@ -46,13 +46,13 @@ var state = false
     
    
     
-    let getButton:UIButton = {
+    let getButton: UIButton = {
         let btn = UIButton()
         
         btn.translatesAutoresizingMaskIntoConstraints = false
         btn.layer.cornerRadius = 17.5
         btn.backgroundColor = UIColor.systemBlue
-        btn.setTitle("SUSCRIPTO", for: .normal)
+        btn.setTitle("SUSCRIBIRME", for: .normal)
         btn.setTitleColor(.white, for: .normal)
         btn.setTitleColor(.blue, for: .highlighted)
         btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
@@ -77,7 +77,7 @@ var state = false
 //        let tapGesture = UITapGestureRecognizer(target: self, action: #selector (tap))
 //        tapGesture.numberOfTapsRequired = 1
 //        getButton.addGestureRecognizer(tapGesture)
-        getButton.addTarget(self, action:#selector(tap), for: .touchUpInside)
+//        getButton.addTarget(self, action:#selector(tap), for: .touchUpInside)
         addSubview(getButton)
         setUpConstraints()
     }
@@ -113,25 +113,30 @@ var state = false
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-    @objc func tap() {
-        
-        if (state) {
-            buttonAnimationFactory.makeActivateAnimation(for: getButton)
-        } else {
-            buttonAnimationFactory.makeDeactivateAnimation(for: getButton)
-        }
-        
-
-        state.toggle()
-       
-        
-    }
+//    @objc func tap() {
+//
+//        if (state) {
+//            buttonAnimationFactory.makeActivateAnimation(for: getButton)
+//        } else {
+//            buttonAnimationFactory.makeDeactivateAnimation(for: getButton)
+//        }
+//
+//
+//        state.toggle()
+//
+//
+//    }
     
     // MARK:- functions for the cell
     func setupCell(viewModel: MovieViewModel) {
         
         movieTitle.text = viewModel.title
-        movieGenre.text = viewModel.genreText
+        if viewModel.genreText == "n/a" {
+            self.movieGenre.text = viewModel.genreObj?.first?.name
+        } else {
+            self.movieGenre.text = viewModel.genreText
+        }
+        
         
         DispatchQueue.global().async {
             viewModel.moviePosterImage.bind {

@@ -36,7 +36,7 @@ struct MovieDetailViewModel {
             switch result {
                 
             case .success(let movie):
-                print(movie)
+                
                 if let titlePlotText = movie.overview {
                      self.moviePlot.value = titlePlotText
                 } else {
@@ -49,5 +49,30 @@ struct MovieDetailViewModel {
             
         }
     }
+    
+}
+
+extension MovieDetailViewModel: Likeable {
+    var subscribedType: Subscriptions {
+        .subscribedMovies
+    }
+    
+    func subscribePressed(id: Int) -> Bool {
+        let buttonStatus = defaultsManager.toggleSubcriptions(id: id)
+        if buttonStatus {
+            return true
+        } else {
+            return false
+        }
+    }
+    
+    func checkIfSubscribed(id: Int) -> Bool {
+        if defaultsManager.checkIfSubcription(id: id) {
+            return true
+        } else {
+            return false
+        }
+    }
+    
     
 }

@@ -109,7 +109,26 @@ class NetworkManager: MovieService {
     
     //MARK: - get favourites
     
-    
+    func getSubscribedMovies(ids: [Int], completion:@escaping ([Movie]?, MovieError?)->()) {
+        var movies = [Movie]()
+        let group = DispatchGroup()
+        for i in 0..<ids.count {
+            group.enter()
+            fetchMovie(id: ids[i]) { (res) in
+                switch res {
+                    
+                case .success(let movie):
+                    movies.append(movie)
+                    group.leave()
+                case .failure(_):
+                    print("Failed to fetch data of movie with id: \(ids[i])")
+                }
+            }
+        }
+        group.notify(queue: .main, execute: {
+            completion(movies,nil)
+        })
+    }
     
     
     
