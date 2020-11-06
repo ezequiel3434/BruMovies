@@ -86,32 +86,15 @@ class MovieRatingsTableViewCell: UITableViewCell {
         return l
     }()
     
-    let ageLabel:UILabel = {
+    let release:UILabel = {
         let l = UILabel()
-        l.text = "Age"
+        l.text = "Lanzamiento"
         l.font = UIFont.systemFont(ofSize: 14, weight: .light)
         l.textColor = CustomColors.lightGray
         l.translatesAutoresizingMaskIntoConstraints = false
         return l
     }()
     
-//    let rankLabel:UILabel = {
-//        let l = UILabel()
-//        l.translatesAutoresizingMaskIntoConstraints = false
-//        l.text = "No1"
-//        l.font = UIFont.systemFont(ofSize: 24, weight: .semibold)
-//        l.textColor = CustomColors.lightGray
-//        return l
-//    }()
-    
-//    let categoryLabel:UILabel = {
-//        let l = UILabel()
-//        l.text = "Action"
-//        l.font = UIFont.systemFont(ofSize: 14, weight: .light)
-//        l.textColor = CustomColors.lightGray
-//        l.translatesAutoresizingMaskIntoConstraints = false
-//        return l
-//    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -119,9 +102,7 @@ class MovieRatingsTableViewCell: UITableViewCell {
         addSubview(ratingCount)
         addSubview(stackView)
         addSubview(ageCountLabel)
-        addSubview(ageLabel)
-//        addSubview(rankLabel)
-//        addSubview(categoryLabel)
+        addSubview(release)
         stackView.addArrangedSubview(star1)
         stackView.addArrangedSubview(star2)
         stackView.addArrangedSubview(star3)
@@ -145,13 +126,10 @@ class MovieRatingsTableViewCell: UITableViewCell {
             ageCountLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30),
             ageCountLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
             
-            ageLabel.topAnchor.constraint(equalTo: ageCountLabel.bottomAnchor, constant: 2),
-            ageLabel.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
+            release.topAnchor.constraint(equalTo: ageCountLabel.bottomAnchor, constant: 2),
+            release.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -30)
             
-//            rankLabel.trailingAnchor.constraint(equalTo: ageCountLabel.leadingAnchor, constant: -70),
-//            rankLabel.topAnchor.constraint(equalTo: topAnchor, constant: 10),
-//            categoryLabel.trailingAnchor.constraint(equalTo: ageLabel.leadingAnchor, constant: -76),
-//            categoryLabel.topAnchor.constraint(equalTo: rankLabel.bottomAnchor, constant: 2)
+
         ])
     }
     
@@ -170,19 +148,8 @@ class MovieRatingsTableViewCell: UITableViewCell {
         ratingCount.text = "\(viewModel.voteCount) Ratings"
         
         ageCountLabel.text = viewModel.yearText
-        ageLabel.text = "Lanzamiento"
-        
-//        DispatchQueue.global().async {
-//            viewModel.moviePosterImage.bind {
-//                guard let posterImage = $0 else { return }
-//                DispatchQueue.main.async { [unowned self] in
-//                    let colors = posterImage.getColors()
-//                    
-//                    self.backgroundColor = colors?.background
-//
-//                }
-//            }
-//        }
+        release.text = "Lanzamiento"
+
     }
 }
 

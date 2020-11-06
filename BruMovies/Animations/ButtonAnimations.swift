@@ -18,7 +18,6 @@ struct ButtonAnimationFactory {
         UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseIn, animations: {
             button.layer.opacity = 1
             button.transform = CGAffineTransform(scaleX: 1, y: 1)
-//            button.setImage(UIImage(systemName: config.symbol, withConfiguration: config.configuration), for: .normal)
             button.tintColor = .red
             button.setTitle("SUSCRIPTO", for: .normal)
             button.backgroundColor = .red
@@ -31,8 +30,6 @@ struct ButtonAnimationFactory {
         UIView.animate(withDuration: 0.25, delay: 0, options: .curveEaseIn, animations: {
             button.layer.opacity = 1
             button.transform = CGAffineTransform(scaleX: 1, y: 1)
-//            button.setImage(UIImage(systemName: config.symbol, withConfiguration: config.configuration), for: .normal)
-            
             button.setTitle("SUSCRIBIRME", for: .normal)
             button.backgroundColor = .blue
         })

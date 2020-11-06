@@ -29,8 +29,6 @@ var state = false
         l.numberOfLines = 0
         l.textColor = UIColor.label
         let attributedText = NSMutableAttributedString(string:"Titulo" , attributes:[NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)])
-//        attributedText.append(NSAttributedString(string: "genero" , attributes:
-//        [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15 , weight:.regular), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))
         l.attributedText = attributedText
         return l
     }()
@@ -61,12 +59,6 @@ var state = false
         return btn
     }()
     
-//    let moreBtn:UIButton = {
-//        let btn = UIButton()
-//        btn.translatesAutoresizingMaskIntoConstraints = false
-//        btn.setBackgroundImage(UIImage(systemName: "ellipsis.circle.fill"), for: .normal)
-//        return btn
-//    }()
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -74,11 +66,6 @@ var state = false
         addSubview(movieImageView)
         addSubview(movieTitle)
         addSubview(movieGenre)
-//        addSubview(moreBtn)
-//        let tapGesture = UITapGestureRecognizer(target: self, action: #selector (tap))
-//        tapGesture.numberOfTapsRequired = 1
-//        getButton.addGestureRecognizer(tapGesture)
-//        getButton.addTarget(self, action:#selector(tap), for: .touchUpInside)
         addSubview(getButton)
         setUpConstraints()
     }
@@ -101,11 +88,7 @@ var state = false
             getButton.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
             getButton.widthAnchor.constraint(equalToConstant: 120),
             getButton.heightAnchor.constraint(equalToConstant: 35)
-            
-//            moreBtn.trailingAnchor.constraint(equalTo: trailingAnchor, constant: -20),
-//            moreBtn.bottomAnchor.constraint(equalTo: bottomAnchor, constant: -20),
-//            moreBtn.widthAnchor.constraint(equalToConstant: 35),
-//            moreBtn.heightAnchor.constraint(equalToConstant: 35)
+
             
             
         ])
@@ -114,19 +97,7 @@ var state = false
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
-//    @objc func tap() {
-//
-//        if (state) {
-//            buttonAnimationFactory.makeActivateAnimation(for: getButton)
-//        } else {
-//            buttonAnimationFactory.makeDeactivateAnimation(for: getButton)
-//        }
-//
-//
-//        state.toggle()
-//
-//
-//    }
+
     
     // MARK:- functions for the cell
     func setupCell(viewModel: MovieViewModel) {

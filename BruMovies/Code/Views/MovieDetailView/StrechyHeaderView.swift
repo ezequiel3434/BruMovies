@@ -18,19 +18,6 @@ class StrechyHeaderView: UIView {
     
     var containerViewHeight = NSLayoutConstraint()
     
-//    let backButton:UIButton = {
-//           let btn = UIButton()
-//
-//           btn.translatesAutoresizingMaskIntoConstraints = false
-//           btn.layer.cornerRadius = 17.5
-//           btn.backgroundColor = UIColor.systemBlue
-//           btn.setTitle("SUSCRIPTO", for: .normal)
-//           btn.setTitleColor(.white, for: .normal)
-//           btn.setTitleColor(.blue, for: .highlighted)
-//           btn.titleLabel?.font = UIFont.systemFont(ofSize: 16, weight: .bold)
-//
-//           return btn
-//       }()
     
     let backButton: UIButton = {
         let backButtonImage = UIImage(named:"back")?.withRenderingMode(.alwaysTemplate)
@@ -43,8 +30,7 @@ class StrechyHeaderView: UIView {
         backButton.setImage(backButtonImage, for: .normal)
         backButton.tintColor = .black
         backButton.imageEdgeInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 3)
-//        backButton.setTitle("  Back", for: .normal)
-//        backButton.setTitleColor(.black, for: .normal)
+
         
         
         return backButton
@@ -71,7 +57,6 @@ class StrechyHeaderView: UIView {
         imageView.contentMode = .scaleAspectFill
         imageView.isUserInteractionEnabled = true
         backButton.isUserInteractionEnabled = true
-        //imageView.addSubview(backButton)
         containerView.addSubview(imageView)
         containerView.addSubview(backButton)
         
@@ -88,7 +73,6 @@ class StrechyHeaderView: UIView {
         
         // Container View Constraints
         containerView.translatesAutoresizingMaskIntoConstraints = false
-        
         containerView.widthAnchor.constraint(equalTo: imageView.widthAnchor).isActive = true
         containerViewHeight = containerView.heightAnchor.constraint(equalTo: self.heightAnchor)
         containerViewHeight.isActive = true
