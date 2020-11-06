@@ -86,10 +86,21 @@ extension MovieSearchViewController: UITableViewDataSource, UITableViewDelegate 
         
         guard let movieDetailVC =  UIStoryboard(name: "Home", bundle: nil).instantiateViewController(withIdentifier: MovieDetailViewController.description()) as? MovieDetailViewController else { return }
         let movViewModel = movieViewModel[indexPath.row]
-        movViewModel.getColors()
-        movieDetailVC.viewModel = movViewModel
-        movieDetailVC.movieListViewModel = MovieListViewModel(defaultsManager: defaultsManager, networkManager: networkManager, handler: fileHandler)
-        self.navigationController?.pushViewController(movieDetailVC, animated: true)
+        //movViewModel.getColors()
+        
+        
+        movViewModel.moviePosterImage.value?.getColors{ [unowned self] colors in
+            movViewModel.colors.value = colors
+            movieDetailVC.viewModel = movViewModel
+            
+            movieDetailVC.movieListViewModel = MovieListViewModel(defaultsManager: self.defaultsManager, networkManager: self.networkManager, handler: self.fileHandler)
+            self.navigationController?.pushViewController(movieDetailVC, animated: true)
+        }
+        
+        
+        
+        
+        
     }
     
     

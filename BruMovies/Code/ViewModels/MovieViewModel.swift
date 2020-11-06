@@ -179,7 +179,11 @@ struct MovieViewModel {
             self.moviePosterImage.bind {
                 guard let posterImage = $0 else { return }
                 DispatchQueue.main.async {
-                    self.colors.value = posterImage.getColors()
+                    
+                    posterImage.getColors { colors in
+                        self.colors.value = colors
+                    }
+                    
                 }
                     
                     

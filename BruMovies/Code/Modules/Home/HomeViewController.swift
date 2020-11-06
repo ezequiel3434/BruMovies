@@ -157,11 +157,16 @@ extension HomeViewController: UICollectionViewDataSource, UICollectionViewDelega
             movieModel = movieViewModels[indexPath.item]
         }
         guard let movieDetailVC = storyboard?.instantiateViewController(identifier: MovieDetailViewController.description()) as? MovieDetailViewController else { return }
-        movieModel.getColors()
-        movieDetailVC.viewModel = movieModel
+        movieModel.moviePosterImage.value?.getColors{ colors in
+            movieModel.colors.value = colors
+            movieDetailVC.viewModel = movieModel
+            
+            movieDetailVC.movieListViewModel = self.movieListViewModel
+            self.navigationController?.pushViewController(movieDetailVC, animated: true)
+        }
         
-        movieDetailVC.movieListViewModel = self.movieListViewModel
-        self.navigationController?.pushViewController(movieDetailVC, animated: true)
+//        movieModel.getColors()
+        
     }
     
     
