@@ -15,7 +15,7 @@ class UpdatesTableViewCell: UITableViewCell {
         l.translatesAutoresizingMaskIntoConstraints = false
         l.text = "RESUMEN"
         l.font = UIFont.systemFont(ofSize: 23, weight: .bold)
-        l.textColor = .black
+        l.textColor = UIColor.label
         return l
     }()
     
@@ -49,7 +49,7 @@ class UpdatesTableViewCell: UITableViewCell {
     let descriptionLabel:UILabel = {
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
-        l.textColor = .black
+        l.textColor = UIColor.label
         l.font = UIFont.systemFont(ofSize: 15, weight: .regular)
         l.numberOfLines = 0
         l.text = "Call of Duty offers new seasons monthly with characters, weapons, maps, and battle pass content updates. All new modes and themed events based on seasonal themes.\n\n  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum. \n\n  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. \n\n   It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."

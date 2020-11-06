@@ -27,6 +27,7 @@ var state = false
         let l = UILabel()
         l.translatesAutoresizingMaskIntoConstraints = false
         l.numberOfLines = 0
+        l.textColor = UIColor.label
         let attributedText = NSMutableAttributedString(string:"Titulo" , attributes:[NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 22)])
 //        attributedText.append(NSAttributedString(string: "genero" , attributes:
 //        [NSAttributedString.Key.font: UIFont.systemFont(ofSize: 15 , weight:.regular), NSAttributedString.Key.foregroundColor: UIColor.lightGray]))

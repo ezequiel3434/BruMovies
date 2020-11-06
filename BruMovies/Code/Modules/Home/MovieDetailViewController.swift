@@ -27,6 +27,8 @@ class MovieDetailViewController: UIViewController {
     
     lazy var tableView:UITableView = {
         let tv = UITableView()
+//        tv.overrideUserInterfaceStyle = .dark
+        tv.backgroundColor = .systemBackground
         tv.translatesAutoresizingMaskIntoConstraints = false
         tv.delegate = self
         tv.dataSource = self
@@ -41,7 +43,8 @@ class MovieDetailViewController: UIViewController {
         let v = CustomNavBar()
         v.controller = self
         v.translatesAutoresizingMaskIntoConstraints = false
-        v.backgroundColor = .white
+        v.overrideUserInterfaceStyle = .dark
+        v.backgroundColor = .lightGray
         v.layer.shadowRadius = 10
         v.layer.shadowColor = UIColor(white: 0, alpha: 0.1).cgColor
         v.layer.shadowOpacity = 1
@@ -55,6 +58,7 @@ class MovieDetailViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         self.detailViewModel = MovieDetailViewModel(movieId: viewModel.id, handler: fileHandler, networkManager: networkManager, defaultsManager: defaultsManager)
         
         setupViews()
@@ -129,7 +133,8 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieOverviewTableViewCell", for: indexPath) as! MovieOverviewTableViewCell
-            cell.backgroundColor = .white
+            cell.backgroundColor = .systemBackground
+//            cell.overrideUserInterfaceStyle = .dark
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.frame.width)
             setupButton(button: cell.getButton)
@@ -139,7 +144,9 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         }
         if indexPath.row == 1 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieRatingsTableViewCell", for: indexPath) as! MovieRatingsTableViewCell
-            cell.backgroundColor = .white
+//            cell.backgroundColor = .white
+            cell.backgroundColor = .systemBackground
+//            cell.overrideUserInterfaceStyle = .dark
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
             cell.setupCell(viewModel: viewModel)
@@ -147,7 +154,9 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
         }
         if indexPath.row == 2 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "UpdatesTableViewCell", for: indexPath) as! UpdatesTableViewCell
-            cell.backgroundColor = .white
+//            cell.backgroundColor = .white
+//            cell.overrideUserInterfaceStyle = .dark
+            cell.backgroundColor = .systemBackground
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
             cell.setupCell(viewModel: viewModel)
