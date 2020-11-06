@@ -48,6 +48,7 @@
 		37D1F3C02553B1B40071C461 /* UIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3BF2553B1B40071C461 /* UIView.swift */; };
 		37D1F3C22553B1C40071C461 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C12553B1C40071C461 /* Constants.swift */; };
 		37D1F3C42553DDE10071C461 /* ButtonAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */; };
+		37D1F3C62555307F0071C461 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C52555307E0071C461 /* SearchViewModel.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
 
@@ -97,6 +98,7 @@
 		37D1F3BF2553B1B40071C461 /* UIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIView.swift; sourceTree = "<group>"; };
 		37D1F3C12553B1C40071C461 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		37D1F3C32553DDE10071C461 /* ButtonAnimations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonAnimations.swift; sourceTree = "<group>"; };
+		37D1F3C52555307E0071C461 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -243,6 +245,7 @@
 				37D1F38A255154E60071C461 /* MovieViewModel.swift */,
 				37D1F38625514EC70071C461 /* MovieListViewModel.swift */,
 				37D1F3AF25538A020071C461 /* MovieDetailViewModel.swift */,
+				37D1F3C52555307E0071C461 /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -450,6 +453,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				37D1F3C02553B1B40071C461 /* UIView.swift in Sources */,
+				37D1F3C62555307F0071C461 /* SearchViewModel.swift in Sources */,
 				37750335254F7A2100988B29 /* NetworkManager.swift in Sources */,
 				37D1F3BD2553B18D0071C461 /* CustomNavBar.swift in Sources */,
 				37AAE0762550C82E0009B6D5 /* RootTabViewController.swift in Sources */,

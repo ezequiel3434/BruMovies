@@ -44,7 +44,18 @@ class MovieDetailViewController: UIViewController {
         v.controller = self
         v.translatesAutoresizingMaskIntoConstraints = false
         v.overrideUserInterfaceStyle = .dark
-        v.backgroundColor = .lightGray
+        // not working..
+        v.backgroundColor =
+        UIColor { traitCollection in
+        // 2
+        switch traitCollection.userInterfaceStyle {
+        case .dark:
+          // 3
+          return UIColor(white: 0.3, alpha: 1.0)
+        default:
+          // 4
+          return UIColor(white: 1, alpha: 1.0)
+            }}
         v.layer.shadowRadius = 10
         v.layer.shadowColor = UIColor(white: 0, alpha: 0.1).cgColor
         v.layer.shadowOpacity = 1
@@ -67,7 +78,8 @@ class MovieDetailViewController: UIViewController {
     }
     
     func setupViews() {
-        
+        navBar.setupNav(viewModel: viewModel)
+        navBar.alpha = 0
         view.addSubview(tableView)
         view.addSubview(navBar)
         tableView.pin(to: view)
@@ -78,8 +90,7 @@ class MovieDetailViewController: UIViewController {
         
         headerView.setupView(viewModel: viewModel)
         self.tableView.tableHeaderView = headerView
-        navBar.setupNav(viewModel: viewModel)
-        navBar.alpha = 0
+        
     }
     
     func setupButton(button: UIButton) {
