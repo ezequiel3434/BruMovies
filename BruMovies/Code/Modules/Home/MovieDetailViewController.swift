@@ -75,12 +75,15 @@ class MovieDetailViewController: UIViewController {
     }
     
     func setupViews() {
-        navBar.setupNav(viewModel: viewModel)
+        
+        
+        viewModel.colors.bind { (clrs) in
+            self.colors = clrs
+                   
+               }
+        
         navBar.alpha = 0
-        
-        
-        
-        
+        navBar.setupNav(viewModel: viewModel)
         
         view.addSubview(tableView)
         view.addSubview(navBar)
