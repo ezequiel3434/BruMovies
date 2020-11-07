@@ -15,7 +15,7 @@ Ofrece la funcionalidad de buscador para acceder de una forma mas rapida a la in
 - File Manager
 - URLSession
 
-## ¿Cómo correr el projecto?
+## ¿Cómo correr el proyecto?
 Colocar la api key en BruMovies/Code/Services/NetworkManager
 
 ## Screenshots
