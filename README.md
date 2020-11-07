@@ -14,6 +14,7 @@ Ofrece la funcionalidad de buscador para acceder de una forma mas rapida a la in
 - UserDefaults
 - File Manager
 - URLSession
+- Unit tests
 
 ## ¿Cómo correr el proyecto?
 Colocar la api key en BruMovies/Code/Services/NetworkManager
