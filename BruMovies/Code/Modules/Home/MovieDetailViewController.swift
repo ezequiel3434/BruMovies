@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import UIImageColors
+//import UIImageColors
 
 class MovieDetailViewController: UIViewController {
     

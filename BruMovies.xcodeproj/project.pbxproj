@@ -13,6 +13,19 @@
 		37029D4E254DD96F0033D073 /* BruMovies.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 37029D4C254DD96F0033D073 /* BruMovies.xcdatamodeld */; };
 		37029D50254DD9710033D073 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37029D4F254DD9710033D073 /* Assets.xcassets */; };
 		37029D53254DD9710033D073 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37029D51254DD9710033D073 /* LaunchScreen.storyboard */; };
+		3723A36E2557247700ABD35B /* MovieService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750336254F84BC00988B29 /* MovieService.swift */; };
+		3723A36F2557249800ABD35B /* BoxBind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F388255151B00071C461 /* BoxBind.swift */; };
+		3723A370255724B700ABD35B /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775032F254F524A00988B29 /* Movies.swift */; };
+		3723A371255724E900ABD35B /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750331254F606B00988B29 /* Utils.swift */; };
+		3723A3722557251600ABD35B /* TitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3AB255362130071C461 /* TitleCollectionViewCell.swift */; };
+		3723A3732557251D00ABD35B /* LargeTitleCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3972552FD910071C461 /* LargeTitleCollectionViewCell.swift */; };
+		3723A3742557253300ABD35B /* ShimmerEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39C255307E50071C461 /* ShimmerEffect.swift */; };
+		3723A3752557254000ABD35B /* Generic-Protocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F39F255311FF0071C461 /* Generic-Protocols.swift */; };
+		3723A3762557258A00ABD35B /* ViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A1255336610071C461 /* ViewExtensions.swift */; };
+		3723A377255725A400ABD35B /* UIViewAnimations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A42553383D0071C461 /* UIViewAnimations.swift */; };
+		3723A378255725B800ABD35B /* BundleExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3932551CCF90071C461 /* BundleExtensions.swift */; };
+		3723A379255725CD00ABD35B /* CoreGraphicsExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3A625533B260071C461 /* CoreGraphicsExtension.swift */; };
+		3774A2F525572DE700EB1520 /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774A2F425572DE700EB1520 /* UIImageColors.swift */; };
 		37750330254F524A00988B29 /* Movies.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775032F254F524A00988B29 /* Movies.swift */; };
 		37750332254F606B00988B29 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750331254F606B00988B29 /* Utils.swift */; };
 		37750335254F7A2100988B29 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750334254F7A2100988B29 /* NetworkManager.swift */; };
@@ -51,8 +64,25 @@
 		37D1F3C62555307F0071C461 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C52555307E0071C461 /* SearchViewModel.swift */; };
 		37D1F3CA255536F10071C461 /* MovieSearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F3C8255536F10071C461 /* MovieSearchTableViewCell.swift */; };
 		37D1F3CB255536F10071C461 /* MovieSearchTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 37D1F3C9255536F10071C461 /* MovieSearchTableViewCell.xib */; };
+		37EACFF425570AF9007218B0 /* BruMoviesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37EACFF325570AF9007218B0 /* BruMoviesTests.swift */; };
+		37EACFFB25570EEA007218B0 /* FileHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3775033A25505F3C00988B29 /* FileHandler.swift */; };
+		37EACFFC25570EEE007218B0 /* UserDefaultsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 377503382550513700988B29 /* UserDefaultsManager.swift */; };
+		37EACFFD25570EF2007218B0 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37750334254F7A2100988B29 /* NetworkManager.swift */; };
+		37EACFFE25570FAC007218B0 /* MovieListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F38625514EC70071C461 /* MovieListViewModel.swift */; };
+		37EACFFF25570FF1007218B0 /* MovieViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37D1F38A255154E60071C461 /* MovieViewModel.swift */; };
+		37FD14F425572EC6003FA2FE /* UIImageColors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3774A2F425572DE700EB1520 /* UIImageColors.swift */; };
 		E559F5FE38C828278EF789FC /* Pods_BruMovies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2540E2B519C2C875883FE699 /* Pods_BruMovies.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		37EACFF625570AF9007218B0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 37029D38254DD96F0033D073 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 37029D3F254DD96F0033D073;
+			remoteInfo = BruMovies;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		237483D16AC215118D11D2BE /* Pods-BruMovies.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.debug.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.debug.xcconfig"; sourceTree = "<group>"; };
@@ -65,6 +95,7 @@
 		37029D4F254DD9710033D073 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		37029D52254DD9710033D073 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		37029D54254DD9710033D073 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3774A2F425572DE700EB1520 /* UIImageColors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIImageColors.swift; sourceTree = "<group>"; };
 		3775032F254F524A00988B29 /* Movies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movies.swift; sourceTree = "<group>"; };
 		37750331254F606B00988B29 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		37750334254F7A2100988B29 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -103,6 +134,9 @@
 		37D1F3C52555307E0071C461 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
 		37D1F3C8255536F10071C461 /* MovieSearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchTableViewCell.swift; sourceTree = "<group>"; };
 		37D1F3C9255536F10071C461 /* MovieSearchTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MovieSearchTableViewCell.xib; sourceTree = "<group>"; };
+		37EACFF125570AF9007218B0 /* BruMoviesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = BruMoviesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		37EACFF325570AF9007218B0 /* BruMoviesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BruMoviesTests.swift; sourceTree = "<group>"; };
+		37EACFF525570AF9007218B0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		661F24D929BC174B8685294C /* Pods-BruMovies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BruMovies.release.xcconfig"; path = "Target Support Files/Pods-BruMovies/Pods-BruMovies.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,6 +149,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37EACFEE25570AF9007218B0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -122,6 +163,7 @@
 			isa = PBXGroup;
 			children = (
 				37029D42254DD96F0033D073 /* BruMovies */,
+				37EACFF225570AF9007218B0 /* BruMoviesTests */,
 				37029D41254DD96F0033D073 /* Products */,
 				C021FEFA69FEC9CBE61E88FB /* Pods */,
 				C2A5B3B4DFF4D109183AC9E5 /* Frameworks */,
@@ -132,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				37029D40254DD96F0033D073 /* BruMovies.app */,
+				37EACFF125570AF9007218B0 /* BruMoviesTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -211,6 +254,7 @@
 				37029D43254DD96F0033D073 /* AppDelegate.swift */,
 				37029D54254DD9710033D073 /* Info.plist */,
 				37029D4C254DD96F0033D073 /* BruMovies.xcdatamodeld */,
+				3774A2F425572DE700EB1520 /* UIImageColors.swift */,
 			);
 			path = SupportingFiles;
 			sourceTree = "<group>";
@@ -348,6 +392,15 @@
 			path = Cells;
 			sourceTree = "<group>";
 		};
+		37EACFF225570AF9007218B0 /* BruMoviesTests */ = {
+			isa = PBXGroup;
+			children = (
+				37EACFF325570AF9007218B0 /* BruMoviesTests.swift */,
+				37EACFF525570AF9007218B0 /* Info.plist */,
+			);
+			path = BruMoviesTests;
+			sourceTree = "<group>";
+		};
 		C021FEFA69FEC9CBE61E88FB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -376,7 +429,6 @@
 				37029D3C254DD96F0033D073 /* Sources */,
 				37029D3D254DD96F0033D073 /* Frameworks */,
 				37029D3E254DD96F0033D073 /* Resources */,
-				81BA4659D1267BFC10CB72DB /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -386,6 +438,24 @@
 			productName = BruMovies;
 			productReference = 37029D40254DD96F0033D073 /* BruMovies.app */;
 			productType = "com.apple.product-type.application";
+		};
+		37EACFF025570AF9007218B0 /* BruMoviesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37EACFFA25570AF9007218B0 /* Build configuration list for PBXNativeTarget "BruMoviesTests" */;
+			buildPhases = (
+				37EACFED25570AF9007218B0 /* Sources */,
+				37EACFEE25570AF9007218B0 /* Frameworks */,
+				37EACFEF25570AF9007218B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				37EACFF725570AF9007218B0 /* PBXTargetDependency */,
+			);
+			name = BruMoviesTests;
+			productName = BruMoviesTests;
+			productReference = 37EACFF125570AF9007218B0 /* BruMoviesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
 
@@ -399,6 +469,10 @@
 				TargetAttributes = {
 					37029D3F254DD96F0033D073 = {
 						CreatedOnToolsVersion = 11.7;
+					};
+					37EACFF025570AF9007218B0 = {
+						CreatedOnToolsVersion = 11.7;
+						TestTargetID = 37029D3F254DD96F0033D073;
 					};
 				};
 			};
@@ -416,6 +490,7 @@
 			projectRoot = "";
 			targets = (
 				37029D3F254DD96F0033D073 /* BruMovies */,
+				37EACFF025570AF9007218B0 /* BruMoviesTests */,
 			);
 		};
 /* End PBXProject section */
@@ -436,26 +511,16 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-/* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		81BA4659D1267BFC10CB72DB /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
+		37EACFEF25570AF9007218B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BruMovies/Pods-BruMovies-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-BruMovies/Pods-BruMovies-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
 			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-BruMovies/Pods-BruMovies-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
 		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
 		C7142E8F0A2441214C05D678 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -515,6 +580,7 @@
 				3775033B25505F3C00988B29 /* FileHandler.swift in Sources */,
 				377503392550513700988B29 /* UserDefaultsManager.swift in Sources */,
 				37750337254F84BC00988B29 /* MovieService.swift in Sources */,
+				3774A2F525572DE700EB1520 /* UIImageColors.swift in Sources */,
 				37D1F39D255307E50071C461 /* ShimmerEffect.swift in Sources */,
 				37D1F3A725533B260071C461 /* CoreGraphicsExtension.swift in Sources */,
 				37D1F3B025538A020071C461 /* MovieDetailViewModel.swift in Sources */,
@@ -524,7 +590,41 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37EACFED25570AF9007218B0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37EACFFD25570EF2007218B0 /* NetworkManager.swift in Sources */,
+				3723A3732557251D00ABD35B /* LargeTitleCollectionViewCell.swift in Sources */,
+				37EACFFB25570EEA007218B0 /* FileHandler.swift in Sources */,
+				3723A3752557254000ABD35B /* Generic-Protocols.swift in Sources */,
+				37EACFF425570AF9007218B0 /* BruMoviesTests.swift in Sources */,
+				37EACFFC25570EEE007218B0 /* UserDefaultsManager.swift in Sources */,
+				37FD14F425572EC6003FA2FE /* UIImageColors.swift in Sources */,
+				37EACFFE25570FAC007218B0 /* MovieListViewModel.swift in Sources */,
+				3723A3722557251600ABD35B /* TitleCollectionViewCell.swift in Sources */,
+				3723A378255725B800ABD35B /* BundleExtensions.swift in Sources */,
+				3723A3742557253300ABD35B /* ShimmerEffect.swift in Sources */,
+				3723A371255724E900ABD35B /* Utils.swift in Sources */,
+				3723A370255724B700ABD35B /* Movies.swift in Sources */,
+				37EACFFF25570FF1007218B0 /* MovieViewModel.swift in Sources */,
+				3723A36F2557249800ABD35B /* BoxBind.swift in Sources */,
+				3723A377255725A400ABD35B /* UIViewAnimations.swift in Sources */,
+				3723A379255725CD00ABD35B /* CoreGraphicsExtension.swift in Sources */,
+				3723A3762557258A00ABD35B /* ViewExtensions.swift in Sources */,
+				3723A36E2557247700ABD35B /* MovieService.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		37EACFF725570AF9007218B0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 37029D3F254DD96F0033D073 /* BruMovies */;
+			targetProxy = 37EACFF625570AF9007218B0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		37029D49254DD96F0033D073 /* Home.storyboard */ = {
@@ -582,6 +682,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -596,7 +697,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -642,6 +743,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_SEARCH_PATHS = "$(SRCROOT)";
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -650,7 +752,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.7;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -698,6 +800,46 @@
 			};
 			name = Release;
 		};
+		37EACFF825570AF9007218B0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8PF4PD98CF;
+				INFOPLIST_FILE = BruMoviesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paradabeltran.BruMoviesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BruMovies.app/BruMovies";
+			};
+			name = Debug;
+		};
+		37EACFF925570AF9007218B0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 8PF4PD98CF;
+				INFOPLIST_FILE = BruMoviesTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.paradabeltran.BruMoviesTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/BruMovies.app/BruMovies";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -715,6 +857,15 @@
 			buildConfigurations = (
 				37029D58254DD9710033D073 /* Debug */,
 				37029D59254DD9710033D073 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37EACFFA25570AF9007218B0 /* Build configuration list for PBXNativeTarget "BruMoviesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37EACFF825570AF9007218B0 /* Debug */,
+				37EACFF925570AF9007218B0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
