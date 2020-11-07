@@ -11,10 +11,13 @@
       location = "group:images"
       name = "images">
       <FileRef
-         location = "group:8.png">
+         location = "group:/Users/ezequiel/Documents/Cursos/Proyectos iOS/BruMovies/images/3.png">
       </FileRef>
       <FileRef
-         location = "group:4.png">
+         location = "group:/Users/ezequiel/Documents/Cursos/Proyectos iOS/BruMovies/images/4.png">
+      </FileRef>
+      <FileRef
+         location = "group:8.png">
       </FileRef>
       <FileRef
          location = "group:5.png">
@@ -27,9 +30,6 @@
       </FileRef>
       <FileRef
          location = "group:2.png">
-      </FileRef>
-      <FileRef
-         location = "group:3.png">
       </FileRef>
       <FileRef
          location = "group:1.png">
