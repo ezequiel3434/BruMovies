@@ -172,6 +172,9 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
             cell.descriptionLabel.textColor = colors?.primary
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+            let backgroundImage = UIImageView(image: viewModel.moviePosterImage.value)
+            backgroundImage.alpha = 0.1
+            cell.backgroundView = backgroundImage
             cell.setupCell(viewModel: viewModel)
             return cell
         }
