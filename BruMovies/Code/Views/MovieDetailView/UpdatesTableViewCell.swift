@@ -33,8 +33,8 @@ class UpdatesTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(headerLabel)
-        addSubview(descriptionLabel)
+        contentView.addSubview(headerLabel)
+        contentView.addSubview(descriptionLabel)
         setUpConstrainst()
     }
     

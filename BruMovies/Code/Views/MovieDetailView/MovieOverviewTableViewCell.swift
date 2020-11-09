@@ -62,11 +62,11 @@ var state = false
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
+        contentView.addSubview(getButton)
+        contentView.addSubview(movieImageView)
+        contentView.addSubview(movieTitle)
+        contentView.addSubview(movieGenre)
         
-        addSubview(movieImageView)
-        addSubview(movieTitle)
-        addSubview(movieGenre)
-        addSubview(getButton)
         setUpConstraints()
     }
     

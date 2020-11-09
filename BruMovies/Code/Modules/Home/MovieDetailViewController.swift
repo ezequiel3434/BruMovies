@@ -96,6 +96,7 @@ class MovieDetailViewController: UIViewController {
     }
     
     func setupButton(button: UIButton) {
+        
         if let status = self.detailViewModel?.checkIfSubscribed(id: viewModel.id) {
             if (status) {
                 button.tintColor = .red
@@ -148,6 +149,7 @@ extension MovieDetailViewController:UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "MovieOverviewTableViewCell", for: indexPath) as! MovieOverviewTableViewCell
+            
             cell.backgroundColor = .clear
             cell.selectionStyle = .none
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: tableView.frame.width)

@@ -98,11 +98,11 @@ class MovieRatingsTableViewCell: UITableViewCell {
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
-        addSubview(ratings)
-        addSubview(ratingCount)
-        addSubview(stackView)
-        addSubview(ageCountLabel)
-        addSubview(release)
+        contentView.addSubview(ratings)
+        contentView.addSubview(ratingCount)
+        contentView.addSubview(stackView)
+        contentView.addSubview(ageCountLabel)
+        contentView.addSubview(release)
         stackView.addArrangedSubview(star1)
         stackView.addArrangedSubview(star2)
         stackView.addArrangedSubview(star3)
